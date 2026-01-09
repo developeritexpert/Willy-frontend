@@ -1,0 +1,92 @@
+/* Vertical dots like CodePen */
+.myslider .slick-dots {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 2%;
+    transform: translateY(-50%);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: auto ;
+    padding: 0 ;
+    margin: 0 ;
+  }
+  
+  .myslider .slick-dots li {
+    list-style: none;
+    margin: 4.8px 0;
+    display: block ;
+    width: 9px;
+    height: 9px;
+  }
+  
+  .myslider .slick-dots li button {
+    border-radius: 50%;
+    width: 9px ;
+    height: 9px ;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-indent: -9999px;
+    overflow: hidden;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0;
+    opacity: 1;
+    display: block ;
+  }
+  
+  .myslider .slick-dots li button::before {
+    display: none ;
+  }
+  
+  .myslider .slick-dots li button:hover {
+    background-color: rgba(255, 255, 255, 0.8) ;
+  }
+  
+  .myslider .slick-dots li.slick-active button {
+    background-color: #ffffff ;
+  }
+  
+  .myslider .slick-slide {
+    height: 100vh ;
+  }
+  
+  .myslider .slick-list,
+  .myslider .slick-track {
+    height: 100%;
+  }
+
+  .myslider {
+    position: relative;
+  }
+  
+
+.products .slider-wrapper {
+  padding-right: 100px;
+}
+.products .slick-list {
+  overflow: visible;
+}
+.products .slider-wrapper:before {
+  content: "";
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 300px;
+  right: 100%;
+  display: block;
+  z-index: 10;
+}
+
+
+@media screen and (max-width: 768px) {
+  .products .slider-wrapper {
+    padding-right: 40px;
+  }
+}
