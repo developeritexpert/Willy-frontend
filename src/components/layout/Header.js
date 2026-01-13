@@ -47,7 +47,7 @@ export default function Header() {
       className={`text-white py-4 fixed inset-x-0 z-50 ${toggle && "bg-[#1B2022]"
         }`}
     >
-      <div className="flex items-center justify-between max-w-[1920px] mx-auto px-5 md:px-12  2xl:px-[60px] uppercase">
+      <div className="flex items-center justify-between max-w-[1920px] mx-auto px-[15px] md:px-8 lg:px-12 2xl:px-[60px] uppercase">
         <img src="/img/logo.svg" className="w-[120px] 2xl:max-w-[164px]" />
         <nav className="hidden xl:block">
           <ul className="flex items-center gap-10 text-[15px] ">
@@ -94,7 +94,7 @@ export default function Header() {
             </svg>
           </button>
           <button className="cart relative ">
-            <span className="absolute w-[14px] h-[14px]  border-2 border-black inline-flex items-center justify-center text-black bg-white rounded-full text-[8px]">
+            <span className="absolute w-[14px] h-[14px] border-1  2xl:border-2 border-black inline-flex items-center justify-center text-black bg-white rounded-full text-[8px]">
               0
             </span>
             <svg
@@ -135,7 +135,7 @@ export default function Header() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="px-5 md:px-12 xl:hidden"
+          className="px-[15px] md:px-8 lg:px-12 xl:hidden"
         >
           <ul className="flex flex-col items-start pt-10 gap-4 lg:gap-6 text-[15px] ">
             {menuItems.map((item, index) => (
@@ -165,7 +165,7 @@ export default function Header() {
             ))}
             <li>
             <button
-              className={`uppercase  rounded-[70px] border-[0.8px] border-[#6666666b] px-[15px] py-[10px] 2xl:py-[14px] 2xl:px-[31px] ${fixed ? "bg-[#666666]" : "bg-transparent"
+              className={`uppercase  rounded-[70px] border-[0.8px] border-[#6666666b] text-sm px-[15px] py-[10px] 2xl:py-[14px] 2xl:px-[31px] ${fixed ? "bg-[#666666]" : "bg-transparent"
                 } `}
             >
               Personaliza tu pared

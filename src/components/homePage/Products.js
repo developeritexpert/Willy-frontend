@@ -97,8 +97,8 @@ export default function Products() {
   };
 
   return (
-    <section className="products overflow-hidden mb-8 md:mb-12 xl:mb-16  2xl:mb-[151px]">
-      <div className="max-w-[1920px] px-5 md:px-12 2xl:px-[60px] overflow-hidden mx-auto">
+    <section className="products overflow-hidden mb-[60px] md:mb-[90px]  2xl:mb-[151px]">
+      <div className="max-w-[1920px] px-[15px] md:px-8 lg:px-12 2xl:px-[60px] overflow-hidden mx-auto">
         
         <div className="flex items-center justify-between mb-[25px]">
           <h4 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-[53px] font-medium">
@@ -107,6 +107,7 @@ export default function Products() {
 
           <Link href="#" className="flex items-center gap-x-[7px] text-[#1B2022]">
             <svg
+            className=""
               width="42"
               height="1"
               viewBox="0 0 42 1"

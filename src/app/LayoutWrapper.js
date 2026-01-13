@@ -5,12 +5,14 @@ import "slick-carousel/slick/slick-theme.css";
 import "@/styles/slick-custom.css";
 
 import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer';
 
 export default function LayoutWrapper({children}) {
   return (
     <>
       <Header/>
       {children}
+      <Footer/>
     </>
   )
 }

@@ -90,3 +90,25 @@
     padding-right: 40px;
   }
 }
+
+
+.ProductsSlide .slider-wrapper {
+  padding-right: 40px;
+}
+.ProductsSlide .slick-list {
+  overflow: visible;
+}
+.ProductsSlide .slider-wrapper:before {
+  content: "";
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 500px;
+  right: 100%;
+  display: block;
+  z-index: 10;
+}
+
+
