@@ -14,14 +14,15 @@ export default function page() {
     <>
       <HeroSection/>
       <Products/>
-       <TextReveal/>
+       <TextReveal desc="  Obra Stone es un material innovador que combina minerales naturales
+            con tecnología avanzada para crear una superficie resistente y
+            elegante."/>
      <ImageGallery/>
        <ProductsSlide/>
       <GridProduct/>
 
-      {/* pending to repsonive below sections */}
-     <CompanyLogos/>
-      <ProductReveal/>
+      <CompanyLogos/>
+     <ProductReveal/>
       <Fundamental/> 
     </>
   )

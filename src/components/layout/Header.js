@@ -9,9 +9,9 @@ export default function Header() {
   const menuItems = [
     { label: "Home", href: "/" },
     { label: "PRODUCTOS", href: "#" },
-    { label: "Dónde comprar", href: "#" },
-    { label: "NOSOTROS", href: "#" },
-    { label: "CONTACTO", href: "#" },
+    { label: "Dónde comprar", href: "/donde-comprar" },
+    { label: "NOSOTROS", href: "/nosotros" },
+    { label: "CONTACTO", href: "/contacto" },
   ];
 
   const pathName = usePathname();

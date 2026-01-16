@@ -63,7 +63,7 @@ export default function Products() {
     pauseOnHover: false,
     pauseOnFocus: false,
 
-    speed: 500,
+    speed: 1000,
 
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -97,7 +97,7 @@ export default function Products() {
   };
 
   return (
-    <section className="products overflow-hidden mb-[60px] md:mb-[90px]  2xl:mb-[151px]">
+    <section data-aos="fade-right" className="products overflow-hidden mb-[60px] md:mb-[90px]  2xl:mb-[151px]">
       <div className="max-w-[1920px] px-[15px] md:px-8 lg:px-12 2xl:px-[60px] overflow-hidden mx-auto">
         
         <div className="flex items-center justify-between mb-[25px]">

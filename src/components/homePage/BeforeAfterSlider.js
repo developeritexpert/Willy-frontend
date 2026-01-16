@@ -12,15 +12,15 @@ export default function BeforeAfterSlider() {
   };
   return (
     <main>
-      <div ref={containerRef} class="container">
-        <div class="image-container">
+      <div ref={containerRef} className="container 2xl:max-w-[1268px] mx-auto" >
+        <div className="image-container">
           <img
-            class="image-before slider-image"
+            className="image-before slider-image"
             src="/img/home/productRevelBefore.png"
             alt="color photo"
           />
           <img
-            class="image-after slider-image"
+            className="image-after slider-image"
             src="/img/home/productRevelAfter.png"
             alt="black and white"
           />
@@ -33,10 +33,10 @@ export default function BeforeAfterSlider() {
           aria-label="Percentage of before photo shown"
                   onInput={handleSlider}
 
-          class="slider"
+          className="slider"
         />
-        <div class="slider-line" aria-hidden="true"></div>
-        <div class="slider-button" aria-hidden="true">
+        <div className="slider-line" aria-hidden="true"></div>
+        <div className="slider-button" aria-hidden="true">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -52,9 +52,9 @@ export default function BeforeAfterSlider() {
               y2="216"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
             ></line>
             <line
               x1="96"
@@ -63,17 +63,17 @@ export default function BeforeAfterSlider() {
               y2="128"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
             ></line>
             <polyline
               points="48 160 16 128 48 96"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
             ></polyline>
             <line
               x1="160"
@@ -82,17 +82,17 @@ export default function BeforeAfterSlider() {
               y2="128"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
             ></line>
             <polyline
               points="208 96 240 128 208 160"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
             ></polyline>
           </svg>
         </div>

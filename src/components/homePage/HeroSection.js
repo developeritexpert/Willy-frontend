@@ -1,14 +1,17 @@
 
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import Link from "next/link";
 
 
 
+
+
 export default function HeroSection() {
+
   const heroSlides = [
     {
       id: 1,
@@ -29,7 +32,7 @@ export default function HeroSection() {
       buttonText: "DESCUBRIR",
     },
     {
-      id: 1,
+      id: 3,
       image: "/img/home/slide1.webp",
       alt: "slide1",
       title: "Obra Paneles de pared",
@@ -42,21 +45,23 @@ export default function HeroSection() {
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
+
     arrows: false,
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     vertical: true,
     verticalSwiping: true,
     pauseOnHover: false,
+   
   };
 
   return (
     <section className="hero-section overflow-y-hidden max-w-[1920px] mx-auto   relative h-[80vh] 2xl:h-[940px] mb-[60px] md:mb-[90px]  2xl:mb-[106px]">
       <Slider {...settings} className="myslider h-full relative ">
         {heroSlides.map((slide) => (
-          <div key={slide.id} >
+          <div data-aos="fade-up" key={slide.id} >
             <div className="relative h-[80vh] 2xl:h-[940px] w-full ">
 
               {/* <Image

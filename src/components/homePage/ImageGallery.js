@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -12,20 +12,21 @@ export default function ImageGallery() {
       x: [0, 6, 0],
     },
     transition: {
-      duration: 6,
+      duration: 3,
       repeat: Infinity,
       ease: "easeInOut",
       delay,
     },
   });
 
-
   return (
-    <section className="mb-[60px] md:mb-[90px]  2xl:mb-[125px] bg-[#1B2022]">
+    <section
+      data-aos="fade-up"
+      className="mb-[60px] md:mb-[90px]  2xl:mb-[125px] bg-[#1B2022]"
+    >
       <div className="flex items-center justify-center relative h-[350px] md:h-[500px] xl:h-[939px] max-w-[1920px] mx-auto px-5 md:px-8 lg:px-12 2xl:px-[90px]">
         <div
-          className="text-lg md:text-3xl xl:text-[46px] relative z-10
-:text-[46px] text-white font-bold text-center max-w-[300px] md:max-w-[500px]  xl:max-w-[765px] 2xl:leading-[58px]"
+          className="text-lg md:text-3xl xl:text-[46px] relative z-10  text-white font-bold text-center max-w-[300px] md:max-w-[500px]  xl:max-w-[771px] 2xl:leading-[58px]"
         >
           <h5 className="mb-[40px] ">
             {" "}
@@ -76,7 +77,7 @@ export default function ImageGallery() {
           <motion.img
             src="/img/home/g5.jpg"
             alt="gallery1"
-            className="w-[50px] h-[50px] md:w-[120px] md:h-[120px] lg:w-[200px] lg:h-[190px] xl:w-[228px] xl:h-[227px] rounded-[13px] absolute bottom-[4%] right-[12%] md:bottom-[5%] md:right-[4%] xl:bottom-[127px] xl:right-[235px] object-cover 2xl:right-[235px] 2xl:bottom-[127px]" 
+            className="w-[50px] h-[50px] md:w-[120px] md:h-[120px] lg:w-[200px] lg:h-[190px] xl:w-[228px] xl:h-[227px] rounded-[13px] absolute bottom-[4%] right-[12%] md:bottom-[5%] md:right-[4%] xl:bottom-[127px] xl:right-[235px] object-cover 2xl:right-[235px] 2xl:bottom-[127px]"
             {...floating(2)}
           />
         </div>

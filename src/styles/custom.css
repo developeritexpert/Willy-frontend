@@ -213,3 +213,11 @@
   }
 
 }
+
+
+@media screen and (min-width:992px) {
+  .bg-grid {
+  background-position: 63% 85px !important;
+
+}
+}

@@ -1,7 +1,25 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans,Inter } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
 import LayoutWrapper from "./LayoutWrapper";
 
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
+});
+
+const satoshi = localFont({
+  src: "../fonts/satoshi/Satoshi-Variable.ttf",
+  variable: "--font-satoshi",
+  display: "swap",
+});
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -10,7 +28,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${plusJakartaSans.variable} ${inter.variable} ${satoshi.variable}`}
+    >
       <body
         
       >

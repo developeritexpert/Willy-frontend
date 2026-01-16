@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function GridProduct() {
   return (
     <div className="max-w-[1920px] mx-auto mb-[60px] md:mb-[90px]  2xl:mb-[135px] ">
-      <div className="grid grid-cols-1   md:grid-cols-2">
+      <div data-aos="fade-right" className="grid grid-cols-1   md:grid-cols-2">
         <div>
           <img
             src="/img/home/ps5.png"
@@ -35,41 +35,23 @@ export default function GridProduct() {
         </div>
       </div>
 
-     <div className="relative">
-  <img
-    src="/img/home/ps7.png"
-    alt="banner"
-    className="h-[350px] md:h-[500px] lg:h-[650px] 2xl:h-[844px] w-full object-cover"
-  />
-
-  <div
-    className="
-      absolute
-      flex flex-col items-center md:items-start
-      max-w-[421px]
-
-      top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-      text-center
-
-      lg:top-auto lg:left-auto
-      lg:translate-x-0 lg:translate-y-0
-      lg:bottom-[174px] lg:right-[321px]
-      lg:text-left
-    "
-  >
-    <h3 className="
+      <div className="relative bg-grid bg-no-repeat bg-cover  bg-fixed bg-[url('/img/home/ps7.png')] h-[350px] md:h-[500px] lg:h-[650px] 2xl:h-[844px] w-full lg:pb-[90px] xl:pe-[100px] 2xl:pb-[96px] 2xl:pe-[321px] flex  justify-center items-center lg:justify-end lg:items-end ">
+        <div className="flex flex-col items-center lg:items-start  lg:max-w-[421px]">
+          <h3
+            className="
       mb-[12px] 2xl:mb-[32px]
       text-[32px] sm:text-[42px] md:text-[56px]
       lg:text-[72px] 2xl:text-[93px]
       lg:leading-[90px] 2xl:leading-[103px]
       font-medium text-white
-    ">
-      Calacatta Grigio
-    </h3>
+    "
+          >
+            Calacatta Grigio
+          </h3>
 
-    <Link
-      href="#"
-      className="
+          <Link
+            href="#"
+            className="
         rounded-[70px]
         border border-white
         text-[13px]
@@ -78,12 +60,11 @@ export default function GridProduct() {
         hover:bg-[#2B3032]
         text-white
       "
-    >
-      Comprar ahora
-    </Link>
-  </div>
-</div>
-
+          >
+            Comprar ahora
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
