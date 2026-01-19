@@ -30,12 +30,12 @@ export default function ImageGallery() {
         >
           <h5 className="mb-[40px] ">
             {" "}
-            Conseguir paneles impermeables para tus{" "}
+            C¿Es posible unir resistencia total, estética de vanguardia y un presupuesto inteligente?{" "}
             <span className="text-[#ffffff33]">
               {" "}
-              paredes con un presupuesto rentable{" "}
+              En OBRA, esa es nuestra especialidad: paneles impermeables{" "}
             </span>{" "}
-            es, sin duda, la cuestión del día.
+           que elevan tu diseño sin comprometer tu inversión
           </h5>
           <Link
             href=""

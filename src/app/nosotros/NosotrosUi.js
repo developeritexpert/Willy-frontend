@@ -7,13 +7,16 @@ export default function NosotrosUi() {
   return (
     <>
       <Banner
-        title="Construyendo el futuro, hoy."
+        title="Cada espacio, una OBRA de arte."
         desc="Diseño atemporal, resistencia técnica, innovación responsable."
         img="/img/banner/3.png"
       />
-      <section data-aos="fade-up" className="max-w-[600px] lg:max-w-[781px] mx-auto px-[15px] lg:px-0 flex flex-col items-center text-center mt-[60px] mb-[80px] xl:mt-[100px]  xl:mb-[130px]">
+      <section
+        data-aos="fade-up"
+        className="max-w-[600px] lg:max-w-[781px] mx-auto px-[15px] lg:px-0 flex flex-col items-center text-center mt-[60px] mb-[80px] xl:mt-[100px]  xl:mb-[130px]"
+      >
         <h5 className=" text-2xl md:text-3xl  lg:text-[42px] font-medium text-[#1B2022] ">
-          La filosofía de Obra
+          ¿Quiénes somos?
         </h5>
         <span className="mt-[14px] mb-[19px]">
           <svg
@@ -27,22 +30,21 @@ export default function NosotrosUi() {
           </svg>
         </span>
         <div className="text-[#80807E] text-[18px] leading-[28px] tracking-[0%] space-y-[16px] ff-inter ">
+          <p> En OBRA creamos experiencias a través del diseño.</p>
           <p>
-            Obra se dedica a crear superficies de piedra innovadoras que
-            combinan la belleza natural con la tecnología moderna. Fabricados
-            mediante procesos avanzados de alta presión y alta temperatura,
-            nuestros materiales ofrecen una durabilidad excepcional, una
-            estética refinada y un rendimiento duradero.
+            Somos una marca venezolana dedicada a ofrecer soluciones estéticas y
+            funcionales para transformar espacios con personalidad, estilo y
+            carácter. Nuestra propuesta combina variedad, calidad, asesoría
+            especializada y pasión por el detalle.
           </p>
           <p>
-            Diseñadas para espacios arquitectónicos y de vida contemporáneos,
-            las superficies Obra ofrecen una elegancia atemporal al tiempo que
-            apoyan una fabricación sostenible y responsable.
+            Desde revestimientos hasta composiciones decorativas, somos un
+            espacio creativo donde la arquitectura, el diseño interior y los
+            materiales se encuentran para dar vida a ideas únicas.
           </p>
         </div>
       </section>
-
-      <section data-aos="fade-up" className="max-w-[1920px] mx-auto px-[15px] md:px-8 lg:px-12 xl:px-[120px] 2xl:px-[240px] mb-[60px] ">
+      {/* <section data-aos="fade-up" className="max-w-[1920px] mx-auto px-[15px] md:px-8 lg:px-12 xl:px-[120px] 2xl:px-[240px] mb-[60px] ">
         <h5 className="text-center text-2xl md:text-3xl  lg:text-[32px] font-medium text-[#1B2022] ">
           Nos esforzamos por
         </h5>
@@ -76,13 +78,17 @@ export default function NosotrosUi() {
             </p>
           </div>
         </div>
-      </section>
-
-      <div data-aos="fade-up" className="max-w-[1920px] mx-auto mb-[70px] xl:mb-[120px]">
+      </section> */}
+      <div
+        data-aos="fade-up"
+        className="max-w-[1920px] mx-auto mb-[70px] xl:mb-[120px]"
+      >
         <img src="/img/banner/4.png" alt="banner" />
       </div>
-
-      <section data-aos="fade-up" className="max-w-[1920px] mx-auto mb-[60px] xl:mb-[120px] px-[15px] md:px-8 lg:px-12 2xl:px-[335px]">
+      <section
+        data-aos="fade-up"
+        className="max-w-[1920px] mx-auto mb-[60px] xl:mb-[120px] px-[15px] md:px-8 lg:px-12 2xl:px-[335px]"
+      >
         <h5 className="text-center text-2xl md:text-3xl  lg:text-[32px] font-medium text-[#1B2022] ">
           Nuestro trabajo refleja quiénes somos{" "}
         </h5>
@@ -112,8 +118,10 @@ export default function NosotrosUi() {
               Visión
             </h6>
             <p className="text-[#80807E] text-sm lg:text-[18px] max-w-[308px]">
-              Ser la marca líder en la creación de espacios únicos e
-              inspiradores.
+              Ser la marca referente en Venezuela en soluciones para el diseño
+              de espacios, reconocida por su excelencia, vanguardia, variedad,
+              atención cercana y capacidad de interpretar las ideas de cada
+              cliente y convertirlas en realidad.
             </p>
           </div>
           <div className="flex flex-col items-center text-center border border-[#1B202214] text-center px-[12px] md:px-[18px] xl:px-[46px] py-[10px] md:py-[15px] xl:pt-[35px] xl:pb-[32px]">
@@ -141,8 +149,11 @@ export default function NosotrosUi() {
               Misión
             </h6>
             <p className="text-[#80807E] text-sm lg:text-[18px] max-w-[308px]">
-              Creación de espacios funcionales y sostenibles con superficies
-              innovadoras.
+              Ofrecer soluciones integrales de diseño que inspiren a nuestros
+              clientes a transformar sus espacios, mediante una experiencia
+              personalizada, una amplia gama de productos de alta calidad y un
+              enfoque estético que valora la autenticidad, el detalle y la
+              innovación.
             </p>
           </div>
           <div className="flex flex-col items-center text-center border border-[#1B202214] text-center px-[12px] md:px-[18px] xl:px-[54px] py-[10px] md:py-[15px] xl:pt-[35px] xl:pb-[32px]">
@@ -170,18 +181,22 @@ export default function NosotrosUi() {
               Valores
             </h6>
             <p className="text-[#80807E] text-sm lg:text-[18px] max-w-[308px]">
-              Guiados por la pasión, la innovación, la colaboración y la
-              inspiración.
+              Calidad, Diversidad, Propósito, Atención personalizada,
+              Innovación, Pasión por los detalles, Compromiso
             </p>
           </div>
         </div>
       </section>
-
-      <section data-aos="fade-up" className="bg-[#1B2022] flex items-center px-[15px] xl:px-0 text-[#FFFFFF]  mb-[60px] xl:pb-[120px] pt-[24px]  lg:pt-[50px] xl:pt-[108px] xl:pb-[130px] h-[380px] md:h-[400px] xl:h-[543px]">
+      <section
+        data-aos="fade-up"
+        className="bg-[#1B2022] flex items-center px-[15px] xl:px-0 text-[#FFFFFF]  mb-[60px] pb-[40px] xl:pb-[120px] pt-[24px]  lg:pt-[50px] xl:pt-[108px] xl:pb-[130px] min-h-[450px] md:h-[400px] xl:h-[543px]"
+      >
         <div className="max-w-[500px] lg:max-w-[765px] mx-auto text-center">
           <h5 className=" text-2xl md:text-3xl xl:text-[42px] font-bold mb-[35px] leading-[35px] lg:leading-[54px] ">
-            Obra crea superficies de piedra innovadoras que dan vida a espacios
-            funcionales, sostenibles y con un diseño atractivo.
+            OBRA desarrolla soluciones integrales para la remodelación,
+            construcción y diseño, ofreciendo materiales de vanguardia que dan
+            vida a espacios funcionales, sostenibles y con una estética
+            excepcional.
           </h5>
           <Link
             href="#"
@@ -191,12 +206,14 @@ export default function NosotrosUi() {
           </Link>
         </div>
       </section>
-
-      <section data-aos="fade-left" className="max-w-[1920px] mx-auto mb-[60px] xl:pb-[120px] px-[15px] md:px-8 lg:px-12 2xl:ps-[273px] 2xl:pe-[299px] ">
+      <section
+        data-aos="fade-up"
+        className="max-w-[1920px] mx-auto mb-[60px] xl:pb-[120px] px-[15px] md:px-8 lg:px-12 2xl:ps-[273px] 2xl:pe-[299px] "
+      >
         <div className="flex flex-wrap lg:flex-nowrap gap-[54px] xl:gap-[138px]">
           <div className="max-w-[493px] pt-[20px] 2xl:pt-[40px]">
             <h5 className="text-2xl  md:text-3xl xl:text-[42px] font-medium">
-              Por qué funciona Obra
+              Para nuestros aliados, somos el mejor proveedor
             </h5>
             <div className="mt-[33px] space-y-[30px]">
               <div>
@@ -204,10 +221,7 @@ export default function NosotrosUi() {
                   01.
                 </h5>
                 <p className="text-[#80807E] ff-inter text-sm xl:text-[16px] max-w-[454px]">
-                  Obra lidera el mercado mundial de superficies avanzadas de
-                  piedra sinterizada, combinando tecnología de vanguardia con
-                  una estética refinada. Confiar en Obra le sitúa a la
-                  vanguardia del diseño moderno de superficies.
+                  Atención y asesoría personalizada en cada proyecto
                 </p>
               </div>
               <div>
@@ -215,13 +229,30 @@ export default function NosotrosUi() {
                   02.
                 </h5>
                 <p className="text-[#80807E] ff-inter text-sm xl:text-[16px] max-w-[460px]">
-                  Fundada por una familia con amplia experiencia en piedra
-                  natural y respaldada por un equipo directivo de primer nivel,
-                  Obra se ha convertido rápidamente en líder mundial en el
-                  segmento de los materiales de construcción de alta gama.
-                  Elegir Obra es sinónimo de confianza respaldada por la
-                  experiencia, el crecimiento y la excelencia demostrada.
+                  Materiales de vanguardia con calidad insuperable.
                 </p>
+              </div>
+              <div>
+                <h5 className="text-[18px] md:text-[26px] lg:text-[32px] xl:text-[38px] font-medium">
+                  03.
+                </h5>
+                <p className="text-[#80807E] ff-inter text-sm xl:text-[16px] max-w-[460px]">
+                  Paquete competitivo.
+                </p>
+              </div>
+              <div>
+                <h5 className="text-[18px] md:text-[26px] lg:text-[32px] xl:text-[38px] font-medium">
+                  04.
+                </h5>
+                <p className="text-[#80807E] ff-inter text-sm xl:text-[16px] max-w-[460px]">
+Disponibilidad inmediata y constante de stock.                </p>
+              </div>
+              <div>
+                <h5 className="text-[18px] md:text-[26px] lg:text-[32px] xl:text-[38px] font-medium">
+                  05.
+                </h5>
+                <p className="text-[#80807E] ff-inter text-sm xl:text-[16px] max-w-[460px]">
+Más de 200 modelos exclusivos por cada tipo de producto.                </p>
               </div>
             </div>
           </div>
@@ -234,9 +265,7 @@ export default function NosotrosUi() {
           </div>
         </div>
       </section>
-
-
-      <TextReveal desc="  A la vanguardia de la innovación en piedra, Obra ofrece superficies excepcionales que combinan belleza, resistencia y sostenibilidad, redefiniendo los espacios en todas partes." />{" "}
+      <TextReveal desc="Transformamos materiales de remodelación y construcción en experiencias" />{" "}
     </>
   );
 }

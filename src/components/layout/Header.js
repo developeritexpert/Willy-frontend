@@ -6,15 +6,17 @@ import { IoMdMenu } from "react-icons/io";
 import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
 export default function Header() {
+  const pathName = usePathname();
+  const isProductosPage = pathName === "/productos";
+
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "PRODUCTOS", href: "#" },
+    { label: "PRODUCTOS", href: "/productos" },
     { label: "Dónde comprar", href: "/donde-comprar" },
     { label: "NOSOTROS", href: "/nosotros" },
     { label: "CONTACTO", href: "/contacto" },
   ];
 
-  const pathName = usePathname();
   const [fixed, setFixed] = useState(false);
   const [toggle, setToggle] = useState(false);
 
@@ -38,14 +40,16 @@ export default function Header() {
       initial={{ y: -80, backgroundColor: "rgba(27,32,34,0)" }}
       animate={{
         y: 0,
-        backgroundColor: fixed || toggle ? "#1B2022" : "rgba(27,32,34,0)",
+        backgroundColor:isProductosPage|| fixed || toggle ? "#1B2022" : "rgba(27,32,34,0)",
       }}
       transition={{
         duration: 0.4,
         ease: "easeOut",
       }}
-      className={`text-white py-4 fixed inset-x-0 z-50 ${toggle && "bg-[#1B2022]"
-        }`}
+className={`text-white py-4 inset-x-0 z-50 ${
+  isProductosPage ? "static" : "fixed"
+}`}
+
     >
       <div className="flex items-center justify-between max-w-[1920px] mx-auto px-[15px] md:px-8 lg:px-12 2xl:px-[60px] uppercase">
         <img src="/img/logo.svg" className="w-[120px] 2xl:max-w-[164px]" />

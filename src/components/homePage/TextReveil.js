@@ -6,29 +6,32 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { usePathname } from "next/navigation";
 
 export default function TextReveal({desc}) {
-  const pathName=usePathname
+  const pathName=usePathname()
   const sectionRef = useRef(null);
 
- useLayoutEffect(() => {
+useLayoutEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
 
   const ctx = gsap.context(() => {
-    const textElements = gsap.utils.toArray(".animate");
+    const textElements = sectionRef.current.querySelectorAll(".animate");
 
     textElements.forEach((el) => {
-      const text = el.textContent.trim();
+      if (!el.dataset.text) {
+        el.dataset.text = el.textContent.trim();
+      }
+
+      const text = el.dataset.text;
       el.innerHTML = "";
 
       const words = text.split(" ");
       const wordSpans = [];
 
-      words.forEach((word, index) => {
+      words.forEach((word) => {
         const span = document.createElement("span");
         span.textContent = word;
         span.style.whiteSpace = "nowrap";
         span.style.display = "inline-block";
         span.style.marginRight = "0.25em";
-
         el.appendChild(span);
         wordSpans.push(span);
       });
@@ -48,7 +51,7 @@ export default function TextReveal({desc}) {
   }, sectionRef);
 
   return () => ctx.revert();
-}, []);
+}, [pathName]);
 
 
   return (

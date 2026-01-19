@@ -45,8 +45,7 @@ export default function Footer() {
               </h5>
               <p className="text-[#747474] font-[400] text-[16px]">
                 {" "}
-                ¡Y entérate de las últimas novedades sobre rebajas y nuevos
-                paneles de pared!
+               Si eres arquitecto, diseñador o distribuidor... OBRA es para ti.
               </p>
             </div>
           </div>

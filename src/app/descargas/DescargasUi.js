@@ -32,8 +32,8 @@ export default function DescargasUi() {
     <>
       
 
-      <div data-aos="fade-up" className="px-[15px] md:px-8 lg:px-12 flex justify-center items-center 2xl:block  2xl:px-[240px] 2xl:pt-[290px] 2xl:pb-[190px] h-[300px] md:h-[450px] lg:h-[550px]  2xl:h-[660px] bg-[url(/img/banner/2.png)] 2xl:bg-center bg-cover  bg-[position:25%_0%]">
-        <h4 className="2xl:max-w-[559px] text-[#FFFFFF]  text-[32px] sm:text-[42px] md:text-[56px] lg:text-[72px] 2xl:text-[82px] font-medium leading-[40px] md:leading-[90px]">            Obra Descargas
+      <div data-aos="fade-up" className="px-[15px] md:px-8 lg:px-12 flex justify-center items-center  xl:justify-start text-center 2xl:text-start  2xl:px-[240px]  h-[300px] md:h-[450px] lg:h-[550px]  2xl:h-[660px] bg-[url(/img/banner/2.png)] 2xl:bg-center bg-cover  bg-[position:25%_0%]">
+        <h4 className="2xl:max-w-[559px] text-[#FFFFFF]  text-[32px] sm:text-[42px] md:text-[56px] lg:text-[72px] 2xl:text-[82px] font-medium leading-[40px] md:leading-[90px]">           Todo lo que tu espacio necesita, en un solo lugar
 </h4>
       </div>
 
@@ -51,9 +51,7 @@ export default function DescargasUi() {
           </svg>
         </span>
         <p className="text-[#80807E] text-[18px] leading-[28px] ">
-          Si puedes imaginarlo, Obra puede hacerlo realidad. Explora nuestros
-          catálogos para descubrir una amplia gama de modelos diseñados para
-          cada superficie y convierte tus ideas en realidad.
+         Descarga nuestros catálogos actualizados y descubre la calidad y el respaldo de nuestros revestimientos, piezas sanitarias y carpintería de diseño para la remodelación y construcción
         </p>
       </div>
 

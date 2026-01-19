@@ -37,8 +37,7 @@ export default function CompanyLogos() {
           ALIADOS
         </span>
         <h5 className="text-2xl md:text-3xl lg:text-4xl  2xl:text-[53px]  mt-[16px] leading-[100%]">
-          Con la confianza de los líderes del sector que impulsan la innovación
-          real en los astilleros.
+          Contamos con la confianza de los visionarios que impulsan una evolución real en cada proyecto, elevando la calidad técnica y estética en el mundo de la construcción
         </h5>
       </div>
 
@@ -60,7 +59,7 @@ export default function CompanyLogos() {
               <img
                 src={img}
                 alt="logo"
-                className="grayscale group-hover:grayscale-0 transition-all duration-300"
+                className="grayscale group-hover:grayscale-0 transition-all duration-300 w-[60px] md:w-auto" 
               />
             </motion.div>
           ))}

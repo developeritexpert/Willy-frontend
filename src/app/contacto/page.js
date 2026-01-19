@@ -5,14 +5,14 @@ export default function page() {
   return (
     <>
       <Banner
-        title="Verbinden Sie sich mit Obra"
+        title="Hagamos realidad tu próxima OBRA."
         desc="Sprechen Sie mit unseren Spezialisten über Steinlösungen für Ihren
           Raum."
         img="/img/banner/1.png"
       />
       <main className="max-w-[1920px] mx-auto  ">
         <section data-aos="fade-right" className="mt-[60px] lg:mt-[120px]  grid grid-cols-1 md:grid-cols-3 gap-[15px] lg:gap-[29px] px-[15px] md:px-8 lg:px-12 2xl:px-[240px]">
-          <div className="flex flex-col items-center text-center px-5 py-3  lg:px-[57px] lg:pt-[50px] lg:pb-[60px]  border border-[#1B20220F] bg-[#1B202205]">
+          <a href="https://maps.app.goo.gl/hkDS1jx1izMre3sy6" className="flex flex-col items-center text-center px-5 py-3  lg:px-[57px] lg:pt-[50px] lg:pb-[60px]  border border-[#1B20220F] bg-[#1B202205]">
             <button className="w-[50px] h-[50px] xl:w-[100px] xl:h-[100px] rounded-full bg-[#1B2022] flex items-center justify-center">
               <svg
                 className="w-[20px] h-[20px] xl:w-[40px] xl:h-[40px]"
@@ -34,9 +34,9 @@ export default function page() {
               Dirección
             </h5>
             <p className="text-[#747474] text-[18px] lg:text-[20px] font-medium ff-satoshi">
-              San Antonio de Los Altos, Venezuela Centro industrial mapama
+            San Antonio de Los Altos, Calle Los Llaneros, Centro Industrial Mapama, Galpón 10, Sector Las Minas
             </p>
-          </div>
+          </a>
           <div className="flex flex-col items-center text-center px-5 py-3  lg:px-[57px] lg:pt-[50px] lg:pb-[60px]  border border-[#1B20220F] bg-[#1B202205]">
             <button className="w-[50px] h-[50px] xl:w-[100px] xl:h-[100px] rounded-full bg-[#1B2022] flex items-center justify-center">
               <svg

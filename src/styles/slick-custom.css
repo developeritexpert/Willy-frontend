@@ -113,3 +113,30 @@
 
 
 
+.location-slider .slick-dots li button:before {
+  font-size: 0;                 /* hide default dot */
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFFF4D;  /* white transparent */
+  border-radius: 50%;
+  content: '';
+  display: block;
+}
+
+.location-slider .slick-dots li {
+  width: 10px;
+  height: 10px;
+  
+}
+
+.location-slider .slick-dots li.slick-active button:before {
+  background-color: #1B2022;    /* active color */
+}
+
+
+ .location-slider .slick-dots {
+  bottom: 20px;
+}
+.location-slider .slick-dots li {
+  margin: 0 6px;
+}

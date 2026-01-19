@@ -8,6 +8,7 @@ export default function DondeComparUi() {
       location: "245 Madison Ave, Nueva York, NY 10016, EE. UU.",
       phNum: "+1 212-555-0181",
       mail: "newyork@obra-surfaces.com",
+      imgUrl:"/img/product/1.png"
     },
     {
       id: "2",
@@ -15,6 +16,8 @@ export default function DondeComparUi() {
       location: "780 S Alameda St, Los Ángeles, CA 90021, EE. UU.",
       phNum: "+1 323-555-0246",
       mail: "losangeles@obra-surfaces.com",
+            imgUrl:"/img/product/2.png"
+
     },
     {
       id: "3",
@@ -22,6 +25,8 @@ export default function DondeComparUi() {
       location: "1100 Brickell Ave, Miami, FL 33131, EE. UU.",
       phNum: "+1 305-555-0379",
       mail: "miami@obra-surfaces.com",
+            imgUrl:"/img/product/3.png"
+
     },
     {
       id: "4",
@@ -29,6 +34,8 @@ export default function DondeComparUi() {
       location: "312 W Superior St, Chicago, IL 60654, EE. UU.",
       phNum: "+1 312-555-0412",
       mail: "chicago@obra-surfaces.com",
+                  imgUrl:"/img/product/4.png"
+
     },
     {
       id: "5",
@@ -36,6 +43,8 @@ export default function DondeComparUi() {
       location: "500 N Akard St, Dallas, TX 75201, EE. UU.",
       phNum: "+1 214-555-0598",
       mail: "dallas@obra-surfaces.com",
+                  imgUrl:"/img/product/5.png"
+
     },
     {
       id: "6",
@@ -43,6 +52,8 @@ export default function DondeComparUi() {
       location: "88 Clerkenwell Rd, Londres EC1M 5RJ, Reino Unido",
       phNum: "+44 20 5555 1624",
       mail: "london@obra-surfaces.com",
+                  imgUrl:"/img/product/6.png"
+
     },
     {
       id: "7",
@@ -50,6 +61,8 @@ export default function DondeComparUi() {
       location: "Calle Pallars, 180, 08005 Barcelona, España",
       phNum: "+34 93 555 2946",
       mail: "barcelona@obra-surfaces.com",
+                  imgUrl:"/img/product/7.png"
+
     },
     {
       id: "8",
@@ -57,6 +70,8 @@ export default function DondeComparUi() {
       location: "Al Serkal Avenue, Al Quoz 1, Dubái, Emiratos Árabes Unidos",
       phNum: "+971 4 555 7821",
       mail: "dubai@obra-surfaces.com",
+                  imgUrl:"/img/product/8.png"
+
     },
     {
       id: "9",
@@ -64,6 +79,8 @@ export default function DondeComparUi() {
       location: "Av. Presidente Masaryk 350, Polanco, CDMX 11560, México",
       phNum: "+52 55 5555 9184",
       mail: "mexico@obra-surfaces.com",
+                  imgUrl:"/img/product/9.png"
+
     },
   ];
 
@@ -76,7 +93,7 @@ export default function DondeComparUi() {
       >
         <div className="text-[#FFFFFF] text-center max-w-[836px]">
           <h4 className="  text-[32px] sm:text-[42px] md:text-[48px] lg:text-[56px] 2xl:text-[62px] font-medium leading-[40px] md:leading-[70px] lg:leading-[72px]">
-            Encuentra tu tienda más cercana Obra
+           Obra, cerca de ti
           </h4>
           <p className="text-[18px] xl:text-[22px] font-normal leading-[30px] mt-[13px] ff-satoshi mx-auto  2xl:max-w-[722px] ">
             Introduce tu ciudad o código postal para encontrar tiendas
@@ -117,7 +134,7 @@ export default function DondeComparUi() {
           <h5 className="text-2xl md:text-3xl xl:text-[53px] font-medium">
             Nuestros socios comerciales
           </h5>
-          <p className="text-[#2B3032] ff-satoshi mt-[9px] text-[18px] xl:text-[22px]">
+          <p className="text-[#2B3032] ff-satoshi mt-[9px] text-[18px] xl:text-[22px] font-normal">
             Tiendas de confianza donde puedes encontrar nuestros productos
           </p>
         </div>
@@ -136,9 +153,9 @@ export default function DondeComparUi() {
               className="border flex flex-col border-[#1B20220F] px-[12px] pb-[18px] pt-[15px] lg:px-[20px] lg:pb-[47px] lg:pt-[20px]"
             >
               <img
-                src="/img/product/1.png"
+                src={elm.imgUrl}
                 alt="product1"
-                className="mb-[20px]"
+                className="mb-[20px] max-h-[260px] max-w-[420px]"
               />
               <div className="">
                 <h6 className="text-[18px] lg:text-[22px] font-medium text-[#1B2022] mb-[18px]">

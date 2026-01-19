@@ -17,10 +17,10 @@ export default function HeroSection() {
       id: 1,
       image: "/img/home/slide1.webp",
       alt: "slide1",
-      title: "Obra Paneles de pared",
+      title: "Diseña con propósito. Construye con excelencia",
       description:
-        "Paneles decorativos perfectos para realzar cualquier espacio",
-      buttonText: "VER MÁS",
+        "Materiales para remodelación y construcción premium: revestimientos, baños y puertas que definen el carácter de cada espacio. Todo lo que tu visión necesita, en un solo lugar",
+      buttonText: "Empezar mi proyecto",
     },
     {
       id: 2,
@@ -35,10 +35,10 @@ export default function HeroSection() {
       id: 3,
       image: "/img/home/slide1.webp",
       alt: "slide1",
-      title: "Obra Paneles de pared",
+      title: "Diseña con propósito. Construye con excelencia",
       description:
-        "Paneles decorativos perfectos para realzar cualquier espacio",
-      buttonText: "VER MÁS",
+        "Materiales para remodelación y construcción premium: revestimientos, baños y puertas que definen el carácter de cada espacio. Todo lo que tu visión necesita, en un solo lugar",
+      buttonText: "Empezar mi proyecto",
     },
   ];
 

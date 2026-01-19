@@ -7,8 +7,7 @@ export default function Fundamental() {
       <div  data-aos="fade-down" className="px-[15px] md:px-8 lg:px-12 2xl:px-[0] mb-[28px] md:mb-[50px]  lg:mb-[63px] 2xl:max-w-[1268px] mx-auto">
         <div className="flex items-center justify-between">
           <h5 className="text-3xl md:text-4xl lg:text-5xl   2xl:text-[77px] max-w-[768px] font-medium 2xl:leading-[95px]">
-            A nivel fundamental, lo que hacemos es calidad.{" "}
-          </h5>
+Existimos para elevar el estándar de la remodelación y construcción          </h5>
           <button className="h-[30px] aspect-square md:h-[40px] md:w-[40px] xl:h-[89px] xl:w-[89px] border-[#1B2022] rounded-full border-[0.5px] inline-flex justify-center items-center">
             <svg
               viewBox="0 0 33 37"
@@ -48,12 +47,7 @@ export default function Fundamental() {
           </div>
           <div className="max-w-[694px]">
             <p className="text-[#B7B9BA] ff-satoshi leading-[29px] text-[14px] md:text-[16px] xl:text-[18px] font-[400] mb-[34px]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
+             Nuestro propósito es simplificar el proceso de creación de espacios extraordinarios, ofreciendo una curaduría experta de revestimientos, piezas sanitarias y elementos de carpintería que fusionan innovación técnica con una estética de vanguardia. En OBRA, construimos el escenario de tu éxito
             </p>
             <Link
               href="#"
