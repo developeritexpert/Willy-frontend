@@ -2,6 +2,12 @@ import Banner from "@/components/contactPage/Banner";
 import React from "react";
 
 export default function page() {
+  const buttons = [
+    { label: "Particular", active: false },
+    { label: "Profesional", active: false },
+    { label: "Aliado Comercial", active: true },
+  ];
+
   return (
     <>
       <Banner
@@ -11,8 +17,14 @@ export default function page() {
         img="/img/banner/1.png"
       />
       <main className="max-w-[1920px] mx-auto  ">
-        <section data-aos="fade-right" className="mt-[60px] lg:mt-[120px]  grid grid-cols-1 md:grid-cols-3 gap-[15px] lg:gap-[29px] px-[15px] md:px-8 lg:px-12 2xl:px-[240px]">
-          <a href="https://maps.app.goo.gl/hkDS1jx1izMre3sy6" className="flex flex-col items-center text-center px-5 py-3  lg:px-[57px] lg:pt-[50px] lg:pb-[60px]  border border-[#1B20220F] bg-[#1B202205]">
+        <section
+          data-aos="fade-right"
+          className="mt-[60px] lg:mt-[120px]  grid grid-cols-1 md:grid-cols-3 gap-[15px] lg:gap-[29px] px-[15px] md:px-8 lg:px-12 2xl:px-[240px]"
+        >
+          <a
+            href="https://maps.app.goo.gl/hkDS1jx1izMre3sy6"
+            className="flex flex-col items-center text-center px-5 py-3  lg:px-[57px] lg:pt-[50px] lg:pb-[60px]  border border-[#1B20220F] bg-[#1B202205]"
+          >
             <button className="w-[50px] h-[50px] xl:w-[100px] xl:h-[100px] rounded-full bg-[#1B2022] flex items-center justify-center">
               <svg
                 className="w-[20px] h-[20px] xl:w-[40px] xl:h-[40px]"
@@ -34,7 +46,8 @@ export default function page() {
               Dirección
             </h5>
             <p className="text-[#747474] text-[18px] lg:text-[20px] font-medium ff-satoshi">
-            San Antonio de Los Altos, Calle Los Llaneros, Centro Industrial Mapama, Galpón 10, Sector Las Minas
+              San Antonio de Los Altos, Calle Los Llaneros, Centro Industrial
+              Mapama, Galpón 10, Sector Las Minas
             </p>
           </a>
           <div className="flex flex-col items-center text-center px-5 py-3  lg:px-[57px] lg:pt-[50px] lg:pb-[60px]  border border-[#1B20220F] bg-[#1B202205]">
@@ -53,7 +66,7 @@ export default function page() {
                 />
               </svg>
             </button>
-            <h5 className="text-[22px] lg:text-[32px] font-medium text-[#1B2022]">
+            <h5 className="text-[22px] lg:text-[28px] xl:text-[32px] font-medium text-[#1B2022]">
               Número de teléfono
             </h5>
             <a
@@ -79,7 +92,7 @@ export default function page() {
                 />
               </svg>
             </button>
-            <h5 className="text-[22px] lg:text-[32px] font-medium text-[#1B2022]">
+            <h5 className="text-[22px] lg:text-[28px] xl:text-[32px] font-medium text-[#1B2022]">
               Correo electrónico
             </h5>
             <p className="text-[#747474] text-[20px] font-medium ff-satoshi">
@@ -87,11 +100,33 @@ export default function page() {
             </p>
           </div>
         </section>
-        <section data-aos="fade-up"
+
+        <section
+          className="mt-[40px] md:mt-[60px] 2xl:mt-[120px]
+   max-w-[746px] mx-auto text-center md:px-8 lg:px-12 2xl:px-[0px]"
+        >
+          <h5 className="text-2xl md:text-3xl xl:text-[44px]">
+            ¿Es una consulta comercial o desea ser distribuidor?
+          </h5>
+          <div className="mt-[30px] flex flex-wrap justify-center gap-[15px]">
+            {buttons.map((btn, index) => (
+              <button
+                key={index}
+                className={`border border-[#2B3032] rounded-[70px] py-[14px]   w-[190px] text-center
+        ${btn.active ? "bg-[#2B3032] text-white" : ""}`}
+              >
+                {btn.label}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section
+          data-aos="fade-up"
           className="
   mx-auto
   mt-[40px] md:mt-[60px] 2xl:mt-[210px]
-  mb-[40px] md:mb-[80px] 2xl:mb-[120px]
+  mb-[40px] md:mb-[80px] 2xl:mb-[100px]
   max-w-[990px]
   px-[15px] md:px-8 lg:px-[49px]
   py-6 lg:pt-[42px] lg:pb-[50px]
@@ -103,7 +138,6 @@ export default function page() {
           </h5>
 
           <form className="mt-[20px] xl:mt-[28px] ff-satoshi">
-            {/* Name fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[20px]">
               {["Nombre", "Apellido", "Correo electrónico", "Teléfono"].map(
                 (label, i) => (
@@ -120,34 +154,46 @@ export default function page() {
                       className="w-full h-[56px] md:h-[60px] rounded-[6px] border border-[#1B20220F] px-4 text-[16px]"
                     />
                   </label>
-                )
+                ),
               )}
             </div>
 
             {/* Company & Country */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[20px] mt-[20px]">
-              <label className="text-[16px] md:text-[18px] flex flex-col gap-[10px] text-[#1B2022]">
+            <div className="grid grid-cols-1 lg:flex  gap-[16px] md:gap-[20px] mt-[20px]">
+              <label className="lg:w-full text-[16px] md:text-[18px] flex flex-col gap-[10px] text-[#1B2022]">
                 Dirección
                 <input className="w-full h-[56px] md:h-[60px] rounded-[6px] border border-[#1B20220F] px-4" />
               </label>
 
-              <label className="text-[16px] md:text-[18px] flex flex-col gap-[10px] text-[#1B2022]">
+              <label className="lg:w-[259px] text-[16px] md:text-[18px] flex flex-col gap-[10px] text-[#1B2022]">
                 País
                 <input className="w-full h-[56px] md:h-[60px] rounded-[6px] border border-[#1B20220F] px-4" />
               </label>
             </div>
 
             {/* Radio buttons */}
-            <div className="mt-[20px] flex  gap-[16px] sm:gap-[26px]">
-              {["Particular", "Profesional"].map((type) => (
-                <label
-                  key={type}
-                  className="flex items-center gap-[10px] text-[16px] md:text-[18px] text-[#1B2022]"
-                >
-                  <input type="radio" name="tipo" />
-                  {type}
-                </label>
-              ))}
+            <div className="mt-[20px]">
+              <h6 className="font-medium text-[18px] lg:text-[26px] ff-satoshi">
+                Tipo de consulta
+              </h6>
+
+              <div className="mt-[14px] flex flex-wrap  gap-[16px] sm:gap-[26px]">
+                {["Particular", "Profesional", "Ser aliado comercial"].map(
+                  (type) => (
+                    <label
+                      key={type}
+                      className="flex items-center gap-[10px] text-[16px] md:text-[18px] text-[#1B2022]"
+                    >
+                      <input
+                        type="radio"
+                        name="tipo"
+                        className="w-[16px] h-[16px] accent-[#1B2022] cursor-pointer"
+                      />
+                      {type}
+                    </label>
+                  ),
+                )}
+              </div>
             </div>
 
             {/* Tipo de consulta */}
@@ -160,6 +206,40 @@ export default function page() {
                 placeholder="Quiero comprar"
                 className="w-full h-[56px] md:h-[60px] rounded-[6px] border border-[#1B20220F] px-4 text-[#747474]"
               />
+            </div>
+
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[20px] mt-[20px]">
+              {["Nombre de la empresa", "Número de contacto"].map(
+                (label, i) => (
+                  <label
+                    key={i}
+                    className="text-[16px] md:text-[18px] flex flex-col gap-[10px] text-[#1B2022]"
+                  >
+                    {label}
+                    <input
+                      type="text"
+                      className="w-full h-[56px] md:h-[60px] rounded-[6px] border border-[#1B20220F] px-4 text-[16px]"
+                    />
+                  </label>
+                ),
+              )}
+            </div>
+
+             <div className="grid grid-cols-1 md:grid-cols-1 gap-[16px] md:gap-[20px] mt-[20px]">
+              {["Área de negocio", "Ubicación Región de coberta"].map(
+                (label, i) => (
+                  <label
+                    key={i}
+                    className="text-[16px] md:text-[18px] flex flex-col gap-[10px] text-[#1B2022]"
+                  >
+                    {label}
+                    <input
+                      type="text"
+                      className="w-full h-[56px] md:h-[60px] rounded-[6px] border border-[#1B20220F] px-4 text-[16px]"
+                    />
+                  </label>
+                ),
+              )}
             </div>
 
             {/* Message */}

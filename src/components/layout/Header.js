@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
 export default function Header() {
   const pathName = usePathname();
-  const isProductosPage = pathName === "/productos";
+const isProductosPage = pathName.startsWith("/productos");
 
   const menuItems = [
     { label: "Home", href: "/" },

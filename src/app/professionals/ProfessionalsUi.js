@@ -118,7 +118,7 @@ export default function ProfessionalsUi() {
         </div>
       </div>
 
-     <div className="max-w-[1920px] mx-auto px-[15px] md:px-0 md:ps-[60px] lg:ps-[150px] 2xl:ps-[240px]   mt-[60px] md:mt-[85px] xl:mt-[127px] ">
+     <div data-aos="fade-up" className="max-w-[1920px] mx-auto px-[15px] md:px-0 md:ps-[60px] lg:ps-[150px] 2xl:ps-[240px]   mt-[60px] md:mt-[85px] xl:mt-[127px] ">
         <div className="flex flex-col items-center">
           <h4 className="text-2xl md:text-3xl xl:text-[42px] font-medium ">
             Las mentes creativas detrás de los proyectos
@@ -153,7 +153,7 @@ export default function ProfessionalsUi() {
           </Slider>
         </div>
       </div>
- <div className="mt-[60px] md:mt-[80px] xl:mt-[102px] max-w-[1920px] mx-auto px-[15px] md:px-8 lg:px-12 2xl:px-[255px]">
+ <div data-aos="fade-up" className="mt-[60px] md:mt-[80px] xl:mt-[102px] max-w-[1920px] mx-auto px-[15px] md:px-8 lg:px-12 2xl:px-[255px]">
   <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-0 items-center">
     
     <div className="text-center lg:text-left">

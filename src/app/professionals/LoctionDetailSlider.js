@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { progress } from "motion";
 
 
 export default function LoctionDetailSlider() {
@@ -98,7 +99,7 @@ export default function LoctionDetailSlider() {
   ];
 
   return (
-    <div className="location-slider relative max-w-[1920px] mx-auto px-[15px] md:px-8 lg:px-12 xl:px-[140px] 2xl:px-[240px] mt-[60px] md:mt-[90px] xl:mt-[120px]">
+    <div data-aos="fade-up" className="location-slider relative max-w-[1920px] mx-auto px-[15px] md:px-8 lg:px-12 xl:px-[140px] 2xl:px-[240px] mt-[60px] md:mt-[90px] xl:mt-[120px]">
       <Slider ref={sliderRef} {...locationSlider}>
         {imgPlusDetailSlides.map((item, index) => (
           <div key={index}>

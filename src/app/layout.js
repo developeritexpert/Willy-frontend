@@ -2,7 +2,7 @@ import { Plus_Jakarta_Sans,Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
-import LayoutWrapper from "./LayoutWrapper";
+import LayoutWrapper from "../components/layout/LayoutWrapper";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
