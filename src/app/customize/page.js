@@ -1,10 +1,10 @@
 import React from 'react'
-import ContactoUi from './ContactoUi'
+import CustomizeComp from './CustomizeComp'
 
 export default function page() {
   return (
     <div>
-      <ContactoUi/>
+      <CustomizeComp/>
     </div>
   )
 }

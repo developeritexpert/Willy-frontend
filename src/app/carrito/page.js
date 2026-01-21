@@ -1,10 +1,10 @@
 import React from 'react'
-import ContactoUi from './ContactoUi'
+import CarritoUi from './CarritoUi'
 
 export default function page() {
   return (
     <div>
-      <ContactoUi/>
+      <CarritoUi/>
     </div>
   )
 }

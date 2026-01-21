@@ -1,10 +1,10 @@
 import React from 'react'
-import ContactoUi from './ContactoUi'
+import FinalizarCompra from './FinalizarCompra'
 
 export default function page() {
   return (
     <div>
-      <ContactoUi/>
+      <FinalizarCompra/>
     </div>
   )
 }

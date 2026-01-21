@@ -156,10 +156,16 @@ export default function ProductosUi() {
       </header>
 
       <section className="max-w-[1920px] mx-auto mt-[40px] lg:mt-[65px] px-[15px] md:px-8 lg:px-12 xl:px-[180px] 2xl:px-[240px] ">
-        <h5 className="font-medium text-2xl md:text-3xl xl:text-[53px] text-center">
+        <h5
+          data-aos="fade-up"
+          className="font-medium text-2xl md:text-3xl xl:text-[53px] text-center"
+        >
           Piedras Sinterizadas
         </h5>
-        <div className="mt-[25px] xl:mt-[61px] grid grid-cols-1 lg:grid-cols-3 gap-[24px] lg:gap-[57px]">
+        <div
+          data-aos="fade-up"
+          className="mt-[25px] xl:mt-[61px] grid grid-cols-1 lg:grid-cols-3 gap-[24px] lg:gap-[57px]"
+        >
           <div
             className={` border-b lg:border-b-0 lg:border-r border-[#1B20220F] pb-6 lg:pb-0`}
           >
@@ -231,7 +237,9 @@ export default function ProductosUi() {
                   <h5 className="text-lg lg:text-[24px] font-medium mt-[10px]">
                     {elm.title}
                   </h5>
-                  <span className="text-[#747474] mt-[4px]">€ {elm.price}</span>
+                  <span className="text-[#747474] mt-[4px] text-[16px]">
+                    € {elm.price}
+                  </span>
                   <div className="flex gap-[6px]">
                     {elm.bg.map((bgColor) => (
                       <button
@@ -242,6 +250,103 @@ export default function ProductosUi() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div
+              className="
+    mt-[40px] lg:mt-[80px]
+    flex justify-center items-center
+    gap-[8px] sm:gap-[10px] lg:gap-[15px]
+    flex-wrap
+  "
+            >
+              {/* Previous */}
+              <button
+                className="
+      w-[38px] h-[38px]
+      sm:w-[44px] sm:h-[44px]
+      lg:w-[59px] lg:h-[59px]
+      rounded-full
+      flex items-center justify-center
+      border border-[#1B20220F]
+    "
+              >
+                <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.2575 6.59808C10.5543 6.59808 9.61585 6.59808 2.94682 6.59808C2.93542 6.63135 2.92402 6.66462 2.92402 6.69789C3.08362 6.77553 3.24322 6.85316 3.40282 6.94188C5.56883 8.0842 6.75444 9.89194 7.19904 12.1987C7.22184 12.2875 7.11924 12.3984 7.07364 12.5093C6.97104 12.4427 6.81144 12.3873 6.77724 12.2875C6.59484 11.7662 6.50364 11.2117 6.28703 10.7126C5.30663 8.428 3.56242 7.07497 1.043 6.66462C0.883405 6.64244 0.769405 6.43172 0.609804 6.29864C1.49901 6.01029 2.28561 5.84393 2.98102 5.52231C5.01023 4.57962 6.18443 2.96042 6.66324 0.842144C6.72024 0.575973 6.68604 0.165628 7.21044 0.343075C6.80004 2.96042 5.86523 4.21364 2.84422 6.14337C3.16342 6.14337 3.38002 6.14337 3.59662 6.14337C9.87805 6.14337 10.4403 6.14337 16.7331 6.15446C16.9725 6.15446 17.3601 6.01028 17.2575 6.59808Z" fill="#1B2022" stroke="#1B2022" stroke-width="0.6"/>
+</svg>
+
+              </button>
+
+              {/* Page 1 (active) */}
+              <button
+                className="
+      w-[38px] h-[38px]
+      sm:w-[44px] sm:h-[44px]
+      lg:w-[59px] lg:h-[59px]
+      bg-[#1B20220F]
+      rounded-full
+      flex items-center justify-center
+      border border-[#1B20220F]
+      text-[14px] sm:text-[16px] lg:text-[18px]
+    "
+              >
+                1
+              </button>
+
+              {/* Page 2 */}
+              <button
+                className="
+      hidden sm:flex
+      w-[38px] h-[38px]
+      sm:w-[44px] sm:h-[44px]
+      lg:w-[59px] lg:h-[59px]
+      text-[#747474]
+      bg-white
+      rounded-full
+      items-center justify-center
+      border border-[#1B20220F]
+      text-[14px] sm:text-[16px] lg:text-[18px]
+    "
+              >
+                2
+              </button>
+
+              {/* Page 3 */}
+              <button
+                className="
+      hidden sm:flex
+      w-[38px] h-[38px]
+      sm:w-[44px] sm:h-[44px]
+      lg:w-[59px] lg:h-[59px]
+      text-[#747474]
+      bg-white
+      rounded-full
+      items-center justify-center
+      border border-[#1B20220F]
+      text-[14px] sm:text-[16px] lg:text-[18px]
+    "
+              >
+                3
+              </button>
+
+              {/* Next */}
+              <button
+                className="
+      w-[38px] h-[38px]
+      sm:w-[44px] sm:h-[44px]
+      lg:w-[59px] lg:h-[59px]
+      text-white
+      bg-[#1B2022]
+      rounded-full
+      flex items-center justify-center
+      border border-[#1B20220F]
+    "
+              >
+                <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.316729 6.35969C7.01997 6.35969 7.95837 6.35969 14.6274 6.35969C14.6388 6.32642 14.6502 6.29314 14.6502 6.25987C14.4906 6.18224 14.331 6.10461 14.1714 6.01588C12.0054 4.87357 10.8198 3.06583 10.3752 0.759018C10.3524 0.670295 10.455 0.559391 10.5006 0.448486C10.6032 0.515029 10.7628 0.570481 10.797 0.670295C10.9794 1.19155 11.0706 1.74607 11.2872 2.24514C12.2676 4.52977 14.0118 5.8828 16.5312 6.29314C16.6908 6.31532 16.8048 6.52604 16.9644 6.65913C16.0752 6.94748 15.2886 7.11384 14.5932 7.43546C12.564 8.37815 11.3898 9.99735 10.911 12.1156C10.854 12.3818 10.8882 12.7921 10.3638 12.6147C10.7742 9.99735 11.709 8.74413 14.73 6.81439C14.4108 6.81439 14.1942 6.81439 13.9776 6.81439C7.69617 6.81439 7.13396 6.81439 0.84113 6.8033C0.601728 6.8033 0.214129 6.94748 0.316729 6.35969Z" fill="white" stroke="white" stroke-width="0.6"/>
+</svg>
+
+              </button>
             </div>
           </div>
         </div>

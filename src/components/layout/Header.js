@@ -7,7 +7,12 @@ import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
 export default function Header() {
   const pathName = usePathname();
-const isProductosPage = pathName.startsWith("/productos");
+  const isStaticHeaderPage =
+    pathName.startsWith("/productos") ||
+    pathName.startsWith("/carrito") ||
+    pathName.startsWith("/finalizar-compra") ||
+        pathName.startsWith("/customize");
+
 
   const menuItems = [
     { label: "Home", href: "/" },
@@ -40,16 +45,18 @@ const isProductosPage = pathName.startsWith("/productos");
       initial={{ y: -80, backgroundColor: "rgba(27,32,34,0)" }}
       animate={{
         y: 0,
-        backgroundColor:isProductosPage|| fixed || toggle ? "#1B2022" : "rgba(27,32,34,0)",
+        backgroundColor:
+          isStaticHeaderPage || fixed || toggle
+            ? "#1B2022"
+            : "rgba(27,32,34,0)",
       }}
       transition={{
         duration: 0.4,
         ease: "easeOut",
       }}
-className={`text-white py-4 inset-x-0 z-50 ${
-  isProductosPage ? "static" : "fixed"
-}`}
-
+      className={`text-white py-4 inset-x-0 z-50 ${
+        isStaticHeaderPage ? "static" : "fixed"
+      }`}
     >
       <div className="flex items-center justify-between max-w-[1920px] mx-auto px-[15px] md:px-8 lg:px-12 2xl:px-[60px] uppercase">
         <img src="/img/logo.svg" className="w-[120px] 2xl:max-w-[164px]" />
@@ -59,8 +66,9 @@ className={`text-white py-4 inset-x-0 z-50 ${
               <li key={index}>
                 <Link
                   href={item.href}
-                  className={`relative ${pathName == item.href ? "font-black" : "font-medium"
-                    }`}
+                  className={`relative ${
+                    pathName == item.href ? "font-black" : "font-medium"
+                  }`}
                 >
                   {item.label}
 
@@ -117,8 +125,11 @@ className={`text-white py-4 inset-x-0 z-50 ${
             </svg>
           </button>
           <button
-            className={`uppercase hidden xl:block rounded-[70px] border-[0.8px] border-[#6666666b] py-[14px] px-[31px] ${fixed ? " background: rgba(255, 255, 255, 0.06)" : "bg-transparent"
-              } `}
+            className={`uppercase hidden xl:block rounded-[70px] border-[0.8px] border-[#6666666b] py-[14px] px-[31px] ${
+              fixed
+                ? " background: rgba(255, 255, 255, 0.06)"
+                : "bg-transparent"
+            } `}
           >
             Personaliza tu pared
           </button>
@@ -126,10 +137,7 @@ className={`text-white py-4 inset-x-0 z-50 ${
           <button onClick={() => setToggle(!toggle)} className="xl:hidden">
             <IoMdMenu />
           </button>
-
         </div>
-
-
       </div>
 
       {/* mobile nav  */}
@@ -146,8 +154,9 @@ className={`text-white py-4 inset-x-0 z-50 ${
               <li key={index}>
                 <Link
                   href={item.href}
-                  className={`relative ${pathName == item.href ? "font-black" : "font-medium"
-                    }`}
+                  className={`relative ${
+                    pathName == item.href ? "font-black" : "font-medium"
+                  }`}
                 >
                   {item.label}
 
@@ -168,14 +177,14 @@ className={`text-white py-4 inset-x-0 z-50 ${
               </li>
             ))}
             <li>
-            <button
-              className={`uppercase  rounded-[70px] border-[0.8px] border-[#6666666b] text-sm px-[15px] py-[10px] 2xl:py-[14px] 2xl:px-[31px] ${fixed ? "bg-[#666666]" : "bg-transparent"
+              <button
+                className={`uppercase  rounded-[70px] border-[0.8px] border-[#6666666b] text-sm px-[15px] py-[10px] 2xl:py-[14px] 2xl:px-[31px] ${
+                  fixed ? "bg-[#666666]" : "bg-transparent"
                 } `}
-            >
-              Personaliza tu pared
-            </button>
+              >
+                Personaliza tu pared
+              </button>
             </li>
-           
           </ul>
         </motion.div>
       )}
