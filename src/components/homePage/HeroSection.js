@@ -110,7 +110,7 @@ export default function HeroSection() {
 
                 <button
                   className="
-                    rounded-[70px] bg-white text-[#1B2022]
+                    rounded-[70px] bg-white text-[#1B2022] hover:bg-[#1B2022] hover:text-[#ffff] transition duration-200
                     py-3 px-6 sm:py-4 sm:px-8 2xl:py-[17px] 2xl:px-[47px]
                     text-sm sm:text-base
                     w-fit

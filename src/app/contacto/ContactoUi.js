@@ -27,7 +27,7 @@ export default function ContactoUi() {
             href="https://maps.app.goo.gl/hkDS1jx1izMre3sy6"
             className="flex flex-col items-center text-center px-5 py-3  lg:px-[57px] lg:pt-[50px] lg:pb-[60px]  border border-[#1B20220F] bg-[#1B202205]"
           >
-            <button className="w-[50px] h-[50px] xl:w-[100px] xl:h-[100px] rounded-full bg-[#1B2022] flex items-center justify-center">
+            <button className="w-[50px] h-[50px] xl:w-[100px] xl:h-[100px] mb-[10px] lg:mb-[25px] rounded-full bg-[#1B2022] flex items-center justify-center">
               <svg
                 className="w-[20px] h-[20px] xl:w-[40px] xl:h-[40px]"
                 viewBox="0 0 40 40"
@@ -44,7 +44,7 @@ export default function ContactoUi() {
                 />
               </svg>
             </button>
-            <h5 className="text-[22px] lg:text-[28px] xl:text-[32px] font-medium text-[#1B2022]">
+            <h5 className="text-[22px] lg:text-[28px] xl:text-[32px] font-medium text-[#1B2022] mb-[6px] lg:mb-[10px]">
               Dirección
             </h5>
             <p className="text-[#747474] text-[18px] lg:text-[20px] font-medium ff-satoshi">
@@ -53,7 +53,7 @@ export default function ContactoUi() {
             </p>
           </a>
           <div className="flex flex-col items-center text-center px-5 py-3  lg:px-[57px] lg:pt-[50px] lg:pb-[60px]  border border-[#1B20220F] bg-[#1B202205]">
-            <button className="w-[50px] h-[50px] xl:w-[100px] xl:h-[100px] rounded-full bg-[#1B2022] flex items-center justify-center">
+            <button className="w-[50px] h-[50px] xl:w-[100px] xl:h-[100px] mb-[10px] lg:mb-[25px] rounded-full bg-[#1B2022] flex items-center justify-center">
               <svg
                 className="w-[20px] h-[20px] xl:w-[37px] xl:h-[37px]"
                 viewBox="0 0 37 37"
@@ -68,7 +68,7 @@ export default function ContactoUi() {
                 />
               </svg>
             </button>
-            <h5 className="text-[22px] lg:text-[28px] xl:text-[32px] font-medium text-[#1B2022]">
+            <h5 className="text-[22px] lg:text-[28px] xl:text-[32px] font-medium text-[#1B2022] mb-[6px] lg:mb-[10px]">
               Número de teléfono
             </h5>
             <a
@@ -79,7 +79,7 @@ export default function ContactoUi() {
             </a>
           </div>
           <div className="flex flex-col items-center text-center px-5 py-3  lg:px-[57px] lg:pt-[50px] lg:pb-[60px]  border border-[#1B20220F] bg-[#1B202205]">
-            <button className="w-[50px] h-[50px] xl:w-[100px] xl:h-[100px] rounded-full bg-[#1B2022] flex items-center justify-center">
+            <button className="w-[50px] h-[50px] xl:w-[100px] xl:h-[100px] mb-[10px] lg:mb-[25px] rounded-full bg-[#1B2022] flex items-center justify-center">
               <svg
                 className="w-[20px] h-[20px] xl:w-[37px] xl:h-[28px]"
                 viewBox="0 0 37 28"
@@ -94,7 +94,7 @@ export default function ContactoUi() {
                 />
               </svg>
             </button>
-            <h5 className="text-[22px] lg:text-[28px] xl:text-[32px] font-medium text-[#1B2022]">
+            <h5 className="text-[22px] lg:text-[28px] xl:text-[32px] font-medium text-[#1B2022] mb-[6px] lg:mb-[10px]">
               Correo electrónico
             </h5>
             <p className="text-[#747474] text-[20px] font-medium ff-satoshi">

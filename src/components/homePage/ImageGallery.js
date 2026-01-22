@@ -39,7 +39,7 @@ export default function ImageGallery() {
           </h5>
           <Link
             href=""
-            className=" rounded-[50px]  2xl:rounded-[70px] bg-[#2B3032] text-[14px] px-[39px] py-[17px]"
+            className=" rounded-[50px]  2xl:rounded-[70px] bg-[#2B3032] hover:bg-[#ffff] hover:text-[#2B3032] uppercase  duration-200 text-[14px] px-[39px] py-[17px]"
           >
             Decora tu pared
           </Link>

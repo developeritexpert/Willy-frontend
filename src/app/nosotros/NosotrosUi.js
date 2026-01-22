@@ -200,7 +200,7 @@ export default function NosotrosUi() {
           </h5>
           <Link
             href="#"
-            className="bg-[#2B3032] px-[48px] py-[17px] rounded-[70px] uppercase text-[14px]"
+            className="bg-[#2B3032] hover:text-[#2B3032] hover:bg-white duration-200  px-[48px] py-[17px] rounded-[70px] uppercase text-[14px] "
           >
             Eleva tu pared
           </Link>
