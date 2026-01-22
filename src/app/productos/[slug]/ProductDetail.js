@@ -6,6 +6,8 @@ export default function ProductDetail() {
   const [colorsVal, setColorVal] = useState("#CCCCCC");
 
   const colors = ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#FFFFFF"];
+const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
+  const [sizeVal, setSizeVal] = useState(null);
 
   const similarPorduct = [
     {
@@ -146,6 +148,25 @@ export default function ProductDetail() {
                   ))}
                 </ul>
               </div>
+              <div className="text-[18px] font-medium mt-[24px]">
+                Tamaños disponibles:
+                <ul className="mt-[18px] flex gap-[10px]">
+                  {sizes.map((size, index) => (
+                    <li key={index} onClick={() => setSizeVal(size)}>
+                      <button
+                        className={`min-w-[40px] h-[32px] px-[10px] text-[14px] font-medium border 
+            ${
+              sizeVal === size
+                ? "border-[#1B2022] bg-[#1B2022] text-white"
+                : "border-[#CCCCCC] text-[#1B2022]"
+            }`}
+                      >
+                        {size}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <div className="border border-dashed border-[#1B20220F] py-[25px] px-[10px] md:px-[28px] mt-[10px] md:mt-[26px]">
@@ -185,7 +206,7 @@ export default function ProductDetail() {
                 </div>
               </div>
 
-              <div className="border-t border-dashed border-[#1B20220F] my-[10px] md:my-[24px] pt-[14px]" />
+              {/* <div className="border-t border-dashed border-[#1B20220F] my-[10px] md:my-[24px] pt-[14px]" />
 
               <div>
                 <h5 className="text-[18px] font-medium mb-[10px]">
@@ -223,7 +244,7 @@ export default function ProductDetail() {
                     Azulejos por caja
                   </span>
                 </div>
-              </div>
+              </div> */}
 
               <button className="mt-[28px] w-full xl:w-auto block ff-satoshi bg-[#1B2022] text-white uppercase px-[34px] py-[13px] rounded-full text-[12px] font-medium">
                 Calculadora
