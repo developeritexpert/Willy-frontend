@@ -223,7 +223,7 @@ export default function DondeComparUi() {
               </div>
               <Link
                 href="#"
-                className="flex w-fit my-auto text-[#FFFFFF] uppercase ff-satoshi font-medium items-center gap-[4px] bg-[#2B3032] rounded-[70px] px-[21px] py-[12px] text-[12px]"
+                className="flex w-fit my-auto text-[#FFFFFF] uppercase ff-satoshi font-medium items-center gap-[4px] bg-[#2B3032] rounded-[70px] px-[21px] py-[12px] text-[12px] hover:bg-[#2b303254]"
               >
                 <span>
                   <svg
@@ -247,7 +247,7 @@ export default function DondeComparUi() {
  
 
          <div data-aos="fade-right" className="mt-[40px] mb-[90px] lg:mt-[65px] lg:mb-[130px] flex justify-center ">
-             <Link href="#"  className="uppercase px-[46px] py-[14px] bg-[#2B3032] text-[#FFFFFF] rounded-[70px] font-medium">Cargar más</Link>
+             <Link href="#"  className="uppercase px-[46px] py-[14px] bg-[#2B3032] text-[#FFFFFF] rounded-[70px] font-medium hover:bg-[#2b303254]">Cargar más</Link>
          </div>
 
       </section>

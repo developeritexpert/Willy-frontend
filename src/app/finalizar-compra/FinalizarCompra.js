@@ -517,7 +517,7 @@ export default function FinalizarCompra() {
               </div>
             </div>
 
-            <button className="text-[14px] font-medium ff-satoshi bg-[#1B2022] rounded-[70px] py-[19px] text-center w-full uppercase mt-[][40px] xl:mt-[65px] text-[#FFFFFF]">
+            <button className="text-[14px] font-medium ff-satoshi bg-[#1B2022] rounded-[70px] py-[19px] text-center w-full uppercase mt-[][40px] xl:mt-[65px] text-[#FFFFFF] hover:bg-[#2b303254]">
               Pagar ahora
             </button>
           </div>

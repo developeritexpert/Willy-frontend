@@ -137,13 +137,13 @@ export default function Header() {
             </svg>
           </button>
           <button
-            className={`uppercase hidden xl:block rounded-[70px] border-[0.8px] py-[14px] px-[31px]
+            className={`uppercase font-medium hidden xl:block rounded-[70px] border-[0.8px] py-[14px] px-[31px]
     ${
       isLightHeader
         ? "border-[#052424]/10 text-black bg-transparent"
         : fixed
-          ? "bg-white/10 border-white/40 text-white"
-          : "border-white/40 text-white"
+          ? "bg-white/10 border-white/40 text-white  hover:bg-white hover:text-[#1B2022]"
+          : "border-white/40 text-white hover:bg-[#1B2022] hover:border-[#1B2022]"
     }
   `}
           >
@@ -199,8 +199,8 @@ export default function Header() {
             ))}
             <li>
               <button
-                className={`uppercase  rounded-[70px] border-[0.8px]   text-sm px-[15px] py-[10px] 2xl:py-[14px] 2xl:px-[31px] ${
-                  fixed ? "bg-[#666666]" : "bg-transparent"
+                className={`uppercase font-medium  rounded-[70px] border-[0.8px]   text-sm px-[15px] py-[10px] 2xl:py-[14px] 2xl:px-[31px] ${
+                  fixed ? "bg-transparent" : "bg-transparent"
                 } `}
               >
                 Personaliza tu pared
@@ -212,3 +212,6 @@ export default function Header() {
     </motion.header>
   );
 }
+
+
+

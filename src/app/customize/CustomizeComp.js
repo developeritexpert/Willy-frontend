@@ -35,9 +35,9 @@ export default function CustomizeComp() {
   return (
     <div className="max-w-[1920px] mx-auto px-[15px] md:px-8 md:px-12 xl:px-[15px] 2xl:px-[0] border-t  border-[#052424]/10 ">
       <div className="xl:min-h-[940px] flex justify-center xl:justify-center flex-wrap xl:flex-nowrap">
-        <div className="xl:flex-1 border-r border-[#052424]/10">
+        <div className="xl:flex-1 border-r border-[#052424]/10 relative">
         {currentTab == "Resumen" && (
-          <div className="flex justify-center lg:justify-end m-[25px]">
+          <div className="flex justify-center lg:justify-end m-[25px] xl:absolute right-0  ">
             <button className="border border-[#1B20221A] px-[10px] md:px-[23px] py-[16px] flex items-center uppercase  gap-[4px] text-xs md:text-[14px] font-semibold">Resumen De Exportaciones <span><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.2917V11.375C0 11.8063 0.170288 12.2193 0.473174 12.524C0.776057 12.8287 1.18663 13 1.61538 13H12.3846C12.8134 13 13.2239 12.8287 13.5268 12.524C13.8297 12.2193 14 11.8063 14 11.375V10.2917C14 9.99239 13.759 9.75 13.4615 9.75C13.164 9.75 12.9231 9.99239 12.9231 10.2917V11.375C12.9231 11.5185 12.8665 11.6567 12.7656 11.7582C12.6646 11.8598 12.5273 11.9167 12.3846 11.9167H1.61539C1.4727 11.9167 1.33539 11.8598 1.23444 11.7582C1.13347 11.6567 1.07694 11.5185 1.07694 11.375V10.2917C1.07694 9.99239 0.835982 9.75 0.538475 9.75C0.240969 9.75 0 9.99239 0 10.2917ZM6.46154 7.90088L4.68866 6.11676C4.47866 5.9055 4.13675 5.9055 3.92674 6.11676C3.71673 6.32802 3.71673 6.67196 3.92674 6.88322L6.61904 9.59156C6.82905 9.80281 7.17096 9.80281 7.38097 9.59156L10.0733 6.88322C10.2833 6.67196 10.2833 6.32802 10.0733 6.11676C9.86327 5.9055 9.52136 5.9055 9.31135 6.11676L7.53848 7.90088V0.541667C7.53848 0.242389 7.29752 0 7.00002 0C6.70251 0 6.46156 0.242389 6.46156 0.541667L6.46154 7.90088Z" fill="#1B2022"/>
 </svg>

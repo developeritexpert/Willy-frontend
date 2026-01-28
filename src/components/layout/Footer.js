@@ -55,7 +55,7 @@ export default function Footer() {
               className="text-[13px] ff-satoshi font-normal py-[18px] bg-white  px-[22px] rounded-[5px] w-full "
               placeholder="Enter Email Address"
             />
-            <span className="font-bold text-[14px] ff-satoshi uppercase absolute top-[17px] right-[19px]">
+            <span className="font-bold text-[14px] cursor-pointer ff-satoshi uppercase absolute top-[17px] right-[19px]">
               Subscribe
             </span>
           </div>
@@ -102,7 +102,7 @@ export default function Footer() {
                   <Link href="/descargas">Descargas</Link>
                 </li>
                 <li>
-                  <Link href="#">Dónde comprar</Link>
+                  <Link href="/donde-comprar">Dónde comprar</Link>
                 </li>
                 <li>
                   <Link href="#">Trabaja en Obra</Link>
@@ -260,7 +260,7 @@ export default function Footer() {
       </div>
 
       {show && (
-        <button className="fixed md:bottom-[59px] bottom-[15px] right-[10px] md:right-[49px] bg-[#2B3032] rounded-full h-[60px] w-[60px] inline-flex justify-center items-center">
+        <button className="animate-pulse fixed  md:bottom-[59px] bottom-[15px] right-[10px] md:right-[49px] bg-[#2B3032] rounded-full h-[60px] w-[60px] inline-flex justify-center items-center">
           <span>
             <svg
               width="26"

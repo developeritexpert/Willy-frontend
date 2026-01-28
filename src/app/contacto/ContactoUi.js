@@ -3,13 +3,12 @@ import Banner from "@/components/contactPage/Banner";
 import PopUpForm from "@/components/homePage/PopUpForm";
 import ContactFrom from "./ContactFrom";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function ContactoUi() {
-  const buttons = [
-    { label: "Particular", active: false },
-    { label: "Profesional", active: false },
-    { label: "Aliado Comercial", active: true },
-  ];
+  const tabs = ["Particular", "Profesional", "Aliado Comercial"];
+
+  const [currentTab, setCurrentTab] = useState("Aliado Comercial");
   return (
     <>
       <Banner
@@ -111,232 +110,260 @@ export default function ContactoUi() {
             ¿Es una consulta comercial o desea ser distribuidor?
           </h5>
           <div className="mt-[30px] flex flex-wrap justify-center gap-[15px]">
-            {buttons.map((btn, index) => (
+            {tabs.map((tab, index) => (
               <button
+                onClick={() => setCurrentTab(tab)}
                 key={index}
                 className={`border border-[#2B3032] rounded-[70px] py-[14px]   w-[190px] text-center
-        ${btn.active ? "bg-[#2B3032] text-white" : ""}`}
+        ${tab == currentTab ? "bg-[#2B3032] text-white" : ""} hover:bg-[#2B3032] hover:text-white`}
               >
-                {btn.label}
+                {tab}
               </button>
             ))}
           </div>
         </section>
 
-        <ContactFrom />
+        {currentTab == "Particular" && (
+          <ContactFrom title="Hola, me gustaría comprar" />
+        )}
+        {currentTab == "Profesional" && (
+          <ContactFrom title="Hola, tengo una consulta comercial" />
+        )}
 
-        <section data-aos="fade-up"
-  className="mt-[60px] lg:mt-[100px] mb-[70px] lg:mb-[120px]  bg-[#1B2022] text-[#FFFFFF]  px-[15px] md:px-8 lg:px-12 2xl:px-[240px] py-[90px] ">
-             <h5 className="text-2xl md:text-3xl xl:text-[42px] font-medium text-center">
-              Qué hace que Obra sea mejor?
-            </h5>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[30px] md:mt-[50px] gap-[30px]">
-              <div className="bg-[#FFFFFF05] p-[20px] lg:p-[30px] xl:p-[50px] border border-[#FFFFFF14]">
-                <img src="/contact-logo.png" alt="logo" />
-                <h6 className="font-medium text-xl lg:text-[32px] mt-[25px]">
-                  Para Empresas
-                </h6>
-                <div className="mt-[13px] ff-satoshi space-y-[14px] text-[20px]">
-                  <div className="flex items-center gap-[10px]">
-                    <span>
-                      <svg
-                        width="18"
-                        height="15"
-                        viewBox="0 0 18 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    <p>Preferencia en entregas</p>
-                  </div>
-                  <div className="flex items-center gap-[10px]">
-                    <span>
-                      <svg
-                        width="18"
-                        height="15"
-                        viewBox="0 0 18 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    <p>Soporte técnico dedicado</p>
-                  </div>
-                  <div className="flex items-center gap-[10px]">
-                    <span>
-                      <svg
-                        width="18"
-                        height="15"
-                        viewBox="0 0 18 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    <p>Programas de fidelización</p>
-                  </div>
+        {currentTab == "Aliado Comercial" && (
+          <ContactFrom title="Hola, me gustaría ser Aliado Comercial" />
+        )}
+
+        <section
+          data-aos="fade-up"
+          className="mt-[60px] lg:mt-[100px] mb-[70px] lg:mb-[120px]  bg-[#1B2022] text-[#FFFFFF]  px-[15px] md:px-8 lg:px-12 2xl:px-[240px] py-[90px] "
+        >
+          <h5 className="text-2xl md:text-3xl xl:text-[42px] font-medium text-center">
+            Qué hace que Obra sea mejor?
+          </h5>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[30px] md:mt-[50px] gap-[30px]">
+            <div className="bg-[#FFFFFF05] p-[20px] lg:p-[30px] xl:p-[50px] border border-[#FFFFFF14]">
+              <img src="/contact-logo.png" alt="logo" />
+              <h6 className="font-medium text-xl lg:text-[32px] mt-[25px]">
+                Para Empresas
+              </h6>
+              <div className="mt-[13px] ff-satoshi space-y-[14px] text-[20px]">
+                <div className="flex items-center gap-[10px]">
+                  <span>
+                    <svg
+                      width="18"
+                      height="15"
+                      viewBox="0 0 18 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <p>Preferencia en entregas</p>
                 </div>
-              </div>
-              <div className="bg-[#FFFFFF05] p-[20px] lg:p-[30px] xl:p-[50px] border border-[#FFFFFF14]">
-                <img src="/contact-logo.png" alt="logo" />
-                <h6 className="font-medium text-xl lg:text-[32px] mt-[25px]">
-                 Para Distribuidores
-                </h6>
-                <div className="mt-[13px] ff-satoshi space-y-[14px] text-[20px]">
-                  <div className="flex items-center gap-[10px]">
-                    <span>
-                      <svg
-                        width="18"
-                        height="15"
-                        viewBox="0 0 18 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    <p>Margen competitivo</p>
-                  </div>
-                  <div className="flex items-center gap-[10px]">
-                    <span>
-                      <svg
-                        width="18"
-                        height="15"
-                        viewBox="0 0 18 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    <p>Materiales promocionales</p>
-                  </div>
-                  <div className="flex items-center gap-[10px]">
-                    <span>
-                      <svg
-                        width="18"
-                        height="15"
-                        viewBox="0 0 18 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    <p>Materiales promocionales</p>
-                  </div>
+                <div className="flex items-center gap-[10px]">
+                  <span>
+                    <svg
+                      width="18"
+                      height="15"
+                      viewBox="0 0 18 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <p>Soporte técnico dedicado</p>
                 </div>
-              </div>
-              <div className="bg-[#FFFFFF05] p-[20px] lg:p-[30px] xl:p-[50px] border border-[#FFFFFF14]">
-                <img src="/contact-logo.png" alt="logo" />
-                <h6 className="font-medium text-xl lg:text-[32px] mt-[25px]">
-                  Para Constructores
-                </h6>
-                <div className="mt-[13px] ff-satoshi space-y-[14px] text-[20px]">
-                  <div className="flex items-center gap-[10px]">
-                    <span>
-                      <svg
-                        width="18"
-                        height="15"
-                        viewBox="0 0 18 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    <p>Asesoría en proyectos</p>
-                  </div>
-                  <div className="flex items-center gap-[10px]">
-                    <span>
-                      <svg
-                        width="18"
-                        height="15"
-                        viewBox="0 0 18 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    <p>Descuentos progresivos</p>
-                  </div>
-                  <div className="flex items-center gap-[10px]">
-                    <span>
-                      <svg
-                        width="18"
-                        height="15"
-                        viewBox="0 0 18 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    <p>Visitas a obra</p>
-                  </div>
+                <div className="flex items-center gap-[10px]">
+                  <span>
+                    <svg
+                      width="18"
+                      height="15"
+                      viewBox="0 0 18 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <p>Programas de fidelización</p>
                 </div>
               </div>
             </div>
+            <div className="bg-[#FFFFFF05] p-[20px] lg:p-[30px] xl:p-[50px] border border-[#FFFFFF14]">
+              <img src="/contact-logo.png" alt="logo" />
+              <h6 className="font-medium text-xl lg:text-[32px] mt-[25px]">
+                Para Distribuidores
+              </h6>
+              <div className="mt-[13px] ff-satoshi space-y-[14px] text-[20px]">
+                <div className="flex items-center gap-[10px]">
+                  <span>
+                    <svg
+                      width="18"
+                      height="15"
+                      viewBox="0 0 18 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <p>Margen competitivo</p>
+                </div>
+                <div className="flex items-center gap-[10px]">
+                  <span>
+                    <svg
+                      width="18"
+                      height="15"
+                      viewBox="0 0 18 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <p>Materiales promocionales</p>
+                </div>
+                <div className="flex items-center gap-[10px]">
+                  <span>
+                    <svg
+                      width="18"
+                      height="15"
+                      viewBox="0 0 18 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <p>Materiales promocionales</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#FFFFFF05] p-[20px] lg:p-[30px] xl:p-[50px] border border-[#FFFFFF14]">
+              <img src="/contact-logo.png" alt="logo" />
+              <h6 className="font-medium text-xl lg:text-[32px] mt-[25px]">
+                Para Constructores
+              </h6>
+              <div className="mt-[13px] ff-satoshi space-y-[14px] text-[20px]">
+                <div className="flex items-center gap-[10px]">
+                  <span>
+                    <svg
+                      width="18"
+                      height="15"
+                      viewBox="0 0 18 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <p>Asesoría en proyectos</p>
+                </div>
+                <div className="flex items-center gap-[10px]">
+                  <span>
+                    <svg
+                      width="18"
+                      height="15"
+                      viewBox="0 0 18 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <p>Descuentos progresivos</p>
+                </div>
+                <div className="flex items-center gap-[10px]">
+                  <span>
+                    <svg
+                      width="18"
+                      height="15"
+                      viewBox="0 0 18 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0 7.79456C0.362538 7.06949 1.08761 6.16314 2.3565 6.52568C3.44411 6.88822 4.16918 7.97583 4.71299 9.42598C9.06344 4.53172 12.6888 1.08761 17.0393 0C17.5831 0 17.7644 0 17.4018 0.362538C12.6888 3.62538 8.1571 8.51964 4.53172 14.864C4.35045 15.0453 4.16918 15.0453 3.98792 14.864C3.26284 13.0514 2.71903 11.2387 1.81269 9.42598C1.45015 8.51964 0.906344 7.79456 0 7.79456Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <p>Visitas a obra</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className="max-w-[770px] mx-auto mb-[60px] md:mb-[70px] lg:mb-[140px] text-center px-[15px] md:px-8 lg:px-12 2xl:px-[0]">
-              <h5 className="font-medium text-2xl md:text-3xl xl:text-[53px]">¿Conoce a alguien que pueda ser aliado?</h5>
-              <p className="text-[#80807E] font-normal ff-satoshi mt-[15px] mb-[23px]">Recomiéndenos y ambos reciban beneficios</p>
-              <Link href="#" className=" px-[29px]  py-[14px] bg-[#2B3032] uppercase ff-satoshi rounded-[70px] text-[#FFFFFF]">Referir Un Aliado</Link>
+          <h5 className="font-medium text-2xl md:text-3xl xl:text-[53px]">
+            ¿Conoce a alguien que pueda ser aliado?
+          </h5>
+          <p className="text-[#80807E] font-normal ff-satoshi mt-[15px] mb-[23px]">
+            Recomiéndenos y ambos reciban beneficios
+          </p>
+          <Link
+            href="#"
+            className=" px-[29px]  py-[14px] bg-[#2B3032] uppercase ff-satoshi rounded-[70px] text-[#FFFFFF] hover:bg-[#2b303254] font-medium"
+          >
+            Referir Un Aliado
+          </Link>
         </section>
-        <div className="flex flex-wrap items-center justify-center xl:justify-start text-center gap-[31px]  px-[15px] md:px-8 lg:px-12 2xl:px-[240px] py-[20px] md:py-[49px]" >
-              <h6 className="text-2xl md:text-3xl xl:text-[42px] font-medium">Distribuya nuestros productos en su región</h6>
-              <Link href="#" className="px-[30px] py-[14px] bg-[#2B3032] uppercase rounded-[70px] text-[#FFFFFF] ff-satoshi">Solicitar información</Link>
+        <div className="flex flex-wrap items-center justify-center xl:justify-start text-center gap-[31px]  px-[15px] md:px-8 lg:px-12 2xl:px-[240px] py-[20px] md:py-[49px]">
+          <h6 className="text-2xl md:text-3xl xl:text-[42px] font-medium">
+            Distribuya nuestros productos en su región
+          </h6>
+          <Link
+            href="#"
+            className="px-[30px] py-[14px] bg-[#2B3032] uppercase rounded-[70px] text-[#FFFFFF] ff-satoshi hover:bg-[#2b303254] font-medium"
+          >
+            Solicitar información
+          </Link>
         </div>
       </main>
       <PopUpForm />

@@ -216,7 +216,7 @@ export default function CarritoUi() {
               </div>
             </div>
 
-            <button className="mt-6 lg:mt-[31px] w-full bg-[#1B2022] text-white py-3 lg:py-[13px] rounded-full text-[12px]">
+            <button className="hover:bg-[#2b303254] mt-6 lg:mt-[31px] w-full bg-[#1B2022] text-white py-3 lg:py-[13px] rounded-full text-[12px]">
               FINALIZAR COMPRA
             </button>
           </div>

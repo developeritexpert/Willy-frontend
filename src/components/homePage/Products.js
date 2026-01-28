@@ -105,7 +105,7 @@ export default function Products() {
             Productos
           </h4>
 
-          <Link href="#" className="flex items-center gap-x-[7px] text-[#1B2022]">
+          <Link href="/productos" className="flex items-center gap-x-[7px] text-[#1B2022]">
             <svg
             className=""
               width="42"
@@ -123,17 +123,18 @@ export default function Products() {
         <div className="slider-wrapper relative ">
           <Slider {...settings} className="products-slider">
             {products.map((product) => (
-              <div key={product.id} className="px-3">
+              <div key={product.id} className="px-3 group">
                 <div className="relative h-[350px] md:h-[400px] 2xl:h-[586px] w-full">
                   <img
                     src={product.image}
                     alt={product.alt}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover "
                   />
 
-                  <h6 className="absolute lg:text-nowrap bottom-10 left-1/2 -translate-x-1/2 text-white text-[22px] 2xl:text-[30px] font-medium text-center">
+                  <h6 className="absolute  lg:text-nowrap bottom-10 left-1/2 -translate-x-1/2 text-white text-[22px] 2xl:text-[30px] font-medium text-center z-20">
                     {product.title}
                   </h6>
+                
                 </div>
               </div>
             ))}

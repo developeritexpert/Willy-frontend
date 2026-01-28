@@ -6,7 +6,7 @@ export default function ProductDetail() {
   const [colorsVal, setColorVal] = useState("#CCCCCC");
 
   const colors = ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#FFFFFF"];
-const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
+  const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
   const [sizeVal, setSizeVal] = useState(null);
 
   const similarPorduct = [
@@ -14,6 +14,7 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
       img: "/img/productos/2.png",
       title: "Carrara Eleganza",
       subTitle: "Soft",
+      cate: "Nuevo",
     },
     {
       img: "/img/productos/3.png",
@@ -24,11 +25,13 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
       img: "/img/productos/4.png",
       title: "Onice Azzurro",
       subTitle: "Brillante",
+      cate: "Nuevo",
     },
     {
       img: "/img/productos/5.png",
       title: "Rosa Palazzi",
       subTitle: "Brillante",
+      cate: "Nuevo",
     },
   ];
   return (
@@ -134,13 +137,13 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
                   {colors.map((color, index) => (
                     <li key={index} onClick={() => setColorVal(color)}>
                       <button
-                        className={`w-[18px] h-[18px] ${colorsVal == color && "flex justify-center items-center border border-[#1B2022]"}`}
-                        style={{ backgroundColor: colorsVal != color && color }}
+                        className={`w-[18px] h-[18px] 2xl:w-[24px] 2xl:h-[24px] relative `}
+                        style={{ backgroundColor: color }}
                       >
                         {colorsVal == color && (
                           <span
-                            className="w-[12px] h-[12px] bg-[#1B2022] block"
-                            style={{ backgroundColor: color }}
+                            className=" absolute inset-0 bg-transparent z-10 outline-1 outline-[#000] border-4 border-[#fff]"
+                            s
                           ></span>
                         )}
                       </button>
@@ -246,7 +249,7 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
                 </div>
               </div> */}
 
-              <button className="mt-[28px] w-full xl:w-auto block ff-satoshi bg-[#1B2022] text-white uppercase px-[34px] py-[13px] rounded-full text-[12px] font-medium">
+              <button className="mt-[28px] w-full xl:w-auto block ff-satoshi bg-[#1B2022] text-white uppercase px-[34px] py-[13px] rounded-full text-[12px] font-medium hover:bg-[#2b303254]">
                 Calculadora
               </button>
             </div>
@@ -317,13 +320,13 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
             <div className="mt-[31px] mb-[26px] flex flex-wrap gap-[10px]">
               <Link
                 href="#"
-                className="py-[17px] px-[37px] w-full text-center xl:w-auto  bg-[#1B2022] rounded-[70px] font-medium text-[14px] ff-satoshi uppercase text-[#FFFFFF]"
+                className="py-[17px] px-[37px] w-full text-center xl:w-auto  bg-[#1B2022] rounded-[70px] font-medium text-[14px] ff-satoshi uppercase text-[#FFFFFF] hover:bg-[#2b303254] transition duration-200"
               >
                 Añadir al carrito
               </Link>
               <Link
                 href="#"
-                className="py-[17px] px-[37px] w-full xl:w-auto text-center border border-[#1B2022] rounded-[70px] font-medium text-[14px] ff-satoshi uppercase text-[#1B2022]"
+                className="py-[17px] px-[37px] w-full xl:w-auto text-center border border-[#1B2022] rounded-[70px] font-medium text-[14px] ff-satoshi uppercase text-[#1B2022] hover:bg-[#1B2022] hover:text-[#ffff] transition duration-200"
               >
                 Visualizar mi proyecto
               </Link>
@@ -333,7 +336,7 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
                 Productos complementarios:
               </h5>
               <div className="mt-[14px] space-y-[10px]">
-                <div className="p-[14px] flex flex-wrap items-center gap-[17px]">
+                <div className="p-[14px] flex flex-wrap md:flex-nowrap items-center gap-[17px] border border-[#1B20220A]">
                   <img
                     src="/img/product/cp1.png"
                     alt="Productos"
@@ -347,7 +350,7 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
                     <p className="text-[14px] text-[#747474]">Desde €8,81</p>
                   </div>
                 </div>
-                <div className="p-[14px] flex flex-wrap items-center gap-[17px]">
+                <div className="p-[14px] flex flex-wrap md:flex-nowrap items-center gap-[17px] border border-[#1B20220A]">
                   <img
                     src="/img/product/cp1.png"
                     alt="Productos"
@@ -360,7 +363,7 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
                     <p className="text-[14px] text-[#747474]">Desde €8,81</p>
                   </div>
                 </div>
-                <div className="p-[14px] flex flex-wrap items-center gap-[17px]">
+                <div className="p-[14px] flex flex-wrap md:flex-nowrap items-center gap-[17px] border border-[#1B20220A]">
                   <img
                     src="/img/product/cp1.png"
                     alt="Productos"
@@ -589,26 +592,25 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
           <div
             className="
     mt-[30px] md:mt-[44px]
-    grid grid-cols-1 lg:grid-cols-3
-    px-[16px] md:px-[19px]
+    flex flex-wrap
+    px-[15px] md:px-[19px]
     2xl:min-h-[513px] 2xl:max-w-[1440px]
   "
           >
             {/* Left section */}
-            <div className="lg:col-span-2 border border-[#1B20220F] lg:border-r">
+            <div className="xl:flex-1 border border-[#1B20220F] lg:border-r">
               <h6 className="text-[18px] md:text-[22px] font-medium border-b border-[#1B20220F] px-[16px] md:px-[19px] py-[18px] md:py-[21px]">
                 6mm Calacatta Reale
               </h6>
 
-              <div className="px-[16px] md:px-[19px] py-[40px] md:py-[60px] relative">
+              <div className="px-[16px] md:px-[19px] xl:pr-[82px] py-[40px] md:py-[60px] relative">
                 <img
                   src="/img/product/productInner.png"
                   alt="productInner"
-                  className="w-full lg:max-w-[360px] xl:max-w-[590px] 2xl:max-w-[639px]"
+                  className="w-full "
                 />
 
-                {/* Labels – hidden on small screens for clarity */}
-                <div className="hidden lg:block font-medium text-[18px] xl:text-[22px]">
+                {/* <div className="hidden lg:block font-medium text-[18px] xl:text-[22px]">
                   <p className="absolute right-[7%] top-[20%]">
                     Acabado superficial
                   </p>
@@ -621,12 +623,12 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
                   <p className="absolute right-[10%] top-[75%]">
                     Malla de refuerzo
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* Right section */}
-            <div className="lg:col-span-1 border border-[#1B20220F] border-t-0 lg:border-t lg:border-l-0">
+            <div className="xl:w-[43%] 2xl:w-[40%] border border-[#1B20220F] border-t-0 lg:border-t lg:border-l-0">
               <h6 className="text-[18px] md:text-[22px] font-medium border-b border-[#1B20220F] px-[20px] md:px-[40px] py-[18px] md:py-[21px]">
                 Especificaciones
               </h6>
@@ -671,18 +673,59 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
           </div>
 
           {/* Buttons */}
-          <div className="mt-[30px] flex flex-col md:flex-row justify-center md:justify-end gap-[10px]">
+          <div className="mt-[30px] xl:w-[43%] 2xl:w-[40%] ms-auto  flex flex-col md:flex-row justify-center  lg:justify-start gap-[10px] uppercase">
             <Link
               href="#"
-              className="px-[30px] py-[15px] ff-satoshi bg-[#1B2022] text-white flex items-center justify-center gap-[6px] rounded-[70px]"
+              className="px-[30px] py-[15px] ff-satoshi bg-[#1B2022] text-white flex items-center justify-center gap-[6px] rounded-[70px] hover:bg-[#2b303254] font-medium text-[14px]"
             >
+              <svg
+                width="15"
+                height="14"
+                viewBox="0 0 15 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 9.16875V12.658C15 13.0136 14.8587 13.3552 14.6076 13.6068C14.3565 13.8584 14.0156 14 13.6607 14H1.33929C0.599331 14 0 13.3994 0 12.658V9.16875C0 8.87215 0.239726 8.63194 0.535714 8.63194C0.831703 8.63194 1.07143 8.87215 1.07143 9.16875V12.658C1.07143 12.7291 1.09955 12.7975 1.14978 12.8479C1.2 12.8982 1.2683 12.9264 1.33929 12.9264H13.6607C13.7317 12.9264 13.8 12.8982 13.8502 12.8479C13.9005 12.7975 13.9286 12.7291 13.9286 12.658V9.16875C13.9286 8.87215 14.1683 8.63194 14.4643 8.63194C14.7603 8.63194 15 8.87215 15 9.16875ZM7.1196 10.5806C7.22005 10.6819 7.35732 10.7396 7.49997 10.7396C7.64261 10.7396 7.77987 10.6819 7.88033 10.5806L11.0946 7.35969C11.3049 7.14898 11.3049 6.80812 11.0946 6.59741C10.8843 6.38671 10.5442 6.38671 10.3339 6.59741L8.03573 8.9058V0.536815C8.03573 0.240218 7.79601 0 7.50002 0C7.20403 0 6.9643 0.240218 6.9643 0.536815V8.9058L4.66613 6.59741C4.45586 6.38671 4.11569 6.38671 3.90542 6.59741C3.69514 6.80812 3.69514 7.14898 3.90542 7.35969L7.1196 10.5806Z"
+                  fill="white"
+                />
+              </svg>
+
               <span>Descargar PDF</span>
             </Link>
 
             <Link
               href="#"
-              className="px-[30px] py-[15px] ff-satoshi bg-[#1B2022] text-white flex items-center justify-center gap-[6px] rounded-[70px]"
+              className="px-[30px] py-[15px] ff-satoshi bg-[#1B2022] text-white flex items-center justify-center gap-[6px] rounded-[70px] hover:bg-[#2b303254] font-medium text-[14px]"
             >
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.36222 9.1573C9.00129 9.1573 9.51936 8.63923 9.51936 8.00016C9.51936 7.36109 9.00129 6.84302 8.36222 6.84302C7.72315 6.84302 7.20508 7.36109 7.20508 8.00016C7.20508 8.63923 7.72315 9.1573 8.36222 9.1573Z"
+                  fill="white"
+                />
+                <path
+                  d="M12.0946 9.1573C12.7337 9.1573 13.2518 8.63923 13.2518 8.00016C13.2518 7.36109 12.7337 6.84302 12.0946 6.84302C11.4556 6.84302 10.9375 7.36109 10.9375 8.00016C10.9375 8.63923 11.4556 9.1573 12.0946 9.1573Z"
+                  fill="white"
+                />
+                <path
+                  d="M4.65421 9.1573C5.29328 9.1573 5.81135 8.63923 5.81135 8.00016C5.81135 7.36109 5.29328 6.84302 4.65421 6.84302C4.01514 6.84302 3.49707 7.36109 3.49707 8.00016C3.49707 8.63923 4.01514 9.1573 4.65421 9.1573Z"
+                  fill="white"
+                />
+                <path
+                  d="M8.40714 0.5C4.03571 0.5 0.5 3.67143 0.5 7.59286C0.5 9.02857 0.992857 10.3786 1.80714 11.4929C1.7 12.7786 1.37857 14.6 0.5 15.5C0.5 15.5 3.22143 15.1143 5.04286 14.0214C6.07143 14.45 7.20714 14.6857 8.40714 14.6857C12.7786 14.6857 16.3143 11.5143 16.3143 7.59286C16.3143 3.67143 12.7786 0.5 8.40714 0.5Z"
+                  stroke="white"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
               <span>Solicitar asistencia</span>
             </Link>
           </div>
@@ -692,17 +735,15 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
           <h6 className="font-medium text-xl text-center md:text-start lg:text-[26px]">
             Detailed view of the full slab of Calacatta Reale
           </h6>
-          <img
-            src="/img/product/mainInner.png"
-            alt="product"
-            className="mt-[34px] "
-          />
+
+          <div className="h-[40vh] md:h-[60vh] xl:h-[702px] mt-[34px] w-full bg-repeat-x bg-center bg-fixed bg " style={{backgroundImage:'url("/img/product/mainInner.png")'}}></div>
         </div>
 
         <div
+        data-aos="fade-up"
           className="
     grid grid-cols-1 xl:grid-cols-3
-    items-start lg:items-center
+    items-start lg:items-start
     gap-[30px] md:gap-[40px] 2xl:gap-[80px]
     mb-[60px] md:mb-[90px] lg:mb-[120px]
   "
@@ -760,7 +801,7 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
               funcionalidad y coste.
             </p>
 
-            <div className="mt-[30px] md:mt-[50px] text-center flex flex-col items-center">
+            <div className="mt-[30px] md:mt-[60px] xl:mt-[80px] text-center flex flex-col items-center">
               <img
                 src="/img/product/thinkness2.png"
                 alt="product"
@@ -777,6 +818,7 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
         </div>
 
         <div
+        data-aos="fade-up"
           className="
     grid grid-cols-1 lg:grid-cols-2
     gap-[30px] md:gap-[40px]
@@ -797,7 +839,7 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
                 Descubre dónde puedes comprar esto.
               </h5>
 
-              <p className="text-[#80807E] mt-[15px] ff-inter  leading-[28px]">
+              <p className="text-[#80807E] mt-[15px] ff-inter  leading-[28px] text-[18px]">
                 Utilice nuestro localizador web para encontrar las tiendas y
                 puntos de venta asociados de Obra donde podrá ver este producto
                 y muchos más.
@@ -812,7 +854,7 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
           bg-[#2B3032]
           w-full block
           uppercase text-center
-          py-[14px]
+          py-[14px] hover:bg-[#2b303254]
         "
               >
                 Dónde comprar
@@ -821,9 +863,9 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
           </div>
         </div>
 
-        <div className="mb-[60px] xl:mb-[120px]">
+        <div data-aos="fade-up" className="mb-[60px] xl:mb-[120px]">
           <h6 className="text-[28px] md:text-[34px] xl:text-[42px] font-medium text-center lg:text-left">
-            Similar Colors Calacatta Reale
+            Colores similares Calacatta Reale
           </h6>
 
           <div
@@ -835,17 +877,22 @@ const sizes = ["30x40 cm", "50x70 cm", "70x100 cm"];
           >
             {similarPorduct.map((product, indx) => (
               <div key={indx} className="text-center lg:text-left">
-                <img
-                  src={product.img}
-                  alt={product.title}
-                  className="w-full object-cover"
-                />
+                <div className="relative">
+                  <img
+                    src={product.img}
+                    alt={product.title}
+                    className="w-full object-cover"
+                  />
+                  <span className="absolute px-[5px] py-[2px] bg-[#1B202230] top-[10px] right-[10px]  font-medium text-[#FFFFFF] text-[13px] ">
+                    {product.cate}
+                  </span>
+                </div>
 
                 <h6 className="text-[14px] md:text-[16px] xl:text-[24px] font-medium mt-[10px] mb-[4px]">
                   {product.title}
                 </h6>
 
-                <p className="text-[#747474] text-[12px] md:text-[14px]">
+                <p className="text-[#747474] text-[12px] md:text-[14px] font-normal">
                   Acabado: {product.subTitle}
                 </p>
               </div>

@@ -26,7 +26,7 @@ export default function GridProduct() {
               <p className="text-[#B7B9BA]">OB413BP271206</p>
               <Link
                 href="#"
-                className="rounded-[70px] mt-[14px] lg:mt-[35px] text-[13px] py-[14px] px-[38px] transition-colors capitalize  bg-[#2B3032] text-[#ffff]"
+                className="uppercase rounded-[70px] mt-[14px] lg:mt-[35px] text-[13px] py-[14px] px-[38px] transition-colors capitalize  bg-[#2B3032] hover:bg-[#2b303254] text-[#ffff] font-medium"
               >
                 Ver producto{" "}
               </Link>
@@ -57,8 +57,9 @@ export default function GridProduct() {
         text-[13px]
         py-[14px] px-[38px]
         transition-colors capitalize
-        hover:bg-[#2B3032]
+        hover:bg-[#2B3032] hover:border-[#2B3032]
         text-white
+        uppercase
       "
           >
             Comprar ahora

@@ -58,11 +58,11 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="hero-section overflow-y-hidden max-w-[1920px] mx-auto   relative h-[80vh] 2xl:h-[940px] mb-[60px] md:mb-[90px]  2xl:mb-[106px]">
+    <section className="hero-section overflow-y-hidden max-w-[1920px] mx-auto   relative h-[80vh] xl:h-[940px] mb-[60px] md:mb-[90px]  2xl:mb-[106px]">
       <Slider {...settings} className="myslider h-full relative ">
         {heroSlides.map((slide) => (
           <div data-aos="fade-up" key={slide.id} >
-            <div className="relative h-[80vh] 2xl:h-[940px] w-full ">
+            <div className="relative h-[80vh] xl:h-[940px] w-full ">
 
               {/* <Image
                 src={slide.image}
@@ -82,16 +82,16 @@ export default function HeroSection() {
               <div
                 className="
                   absolute inset-0 flex flex-col justify-end text-white
-                  px-[15px] md:px-8 lg:px-12 2xl:px-[236px]
-                  pb-20 md:pb-28 lg:pb-32 2xl:pb-40
+                  px-[15px] md:px-8 lg:px-12 xl:px-[236px]
+                  pb-20 md:pb-28 lg:pb-32 xl:pb-40
                 "
               >
                 <h1
                   className="
-                    text-[32px] sm:text-[42px] md:text-[56px] lg:text-[72px] 2xl:text-[93px]
-                    leading-[36px] sm:leading-[46px] md:leading-[62px] lg:leading-[78px] 2xl:leading-[96px]
+                    text-[32px] sm:text-[42px] md:text-[56px] xl:text-[72px] 2xl:text-[93px]
+                    leading-[36px] sm:leading-[46px] md:leading-[62px] xl:leading-[78px] 2xl:leading-[96px]
                     font-medium
-                    max-w-full md:max-w-[500px] lg:max-w-[600px] 2xl:max-w-[674px]
+                    max-w-full md:max-w-[500px] xl:max-w-[600px] 2xl:max-w-[674px]
                   "
                 >
                   {slide.title}
@@ -102,7 +102,7 @@ export default function HeroSection() {
                     mt-3 mb-5
                     text-sm sm:text-base
                     max-w-full md:max-w-[420px] 2xl:max-w-[495px]
-                    pr-0 lg:pr-20 2xl:pr-48
+                    pr-0 lg:pr-20 2xl:pr-48 
                   "
                 >
                   {slide.description}
@@ -112,7 +112,7 @@ export default function HeroSection() {
                   className="
                     rounded-[70px] bg-white text-[#1B2022] hover:bg-[#1B2022] hover:text-[#ffff] transition duration-200
                     py-3 px-6 sm:py-4 sm:px-8 2xl:py-[17px] 2xl:px-[47px]
-                    text-sm sm:text-base
+                    text-sm sm:text-base uppercase
                     w-fit
                   "
                 >
@@ -128,7 +128,7 @@ export default function HeroSection() {
       {/* Circle in bottom right corner */}
       <div className="contact_containier ">
         <div className="banner-btm-contact">
-          <Link href="/contact" className="circle-button">
+          <Link href="/contacto" className="circle-button">
             <div className="mail-icon relative">
               <img
                 src="/hero-conatct.png"

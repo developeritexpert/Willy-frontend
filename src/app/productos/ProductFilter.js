@@ -69,7 +69,7 @@ export default function ProductFilter({ showFilter }) {
           <input
             type="text"
             placeholder="Introduzca la búsqueda..."
-            className="w-full py-[14px] px-[14px] text-[#B7B9BA] text-[12px] font-normal outline-none"
+            className="w-full py-[14px] px-[14px] placeholder:text-[#B7B9BA]  text-[12px] font-normal outline-none"
           />
           <span className="absolute right-[14px] top-[15px]">
             <svg
@@ -95,7 +95,7 @@ export default function ProductFilter({ showFilter }) {
           className="flex justify-between items-center w-full "
         >
           <span className="text-[16px] font-medium">Disponibilidad</span>{" "}
-          <span>
+          <span className={`duration-200 ${disponibilidadToggle ? "" : "rotate-180"}`}>
             <svg
               width="13"
               height="7"
@@ -136,7 +136,7 @@ export default function ProductFilter({ showFilter }) {
           className="flex justify-between items-center w-full "
         >
           <span className="text-[16px] font-medium">Colores</span>{" "}
-          <span>
+          <span className={`duration-200 ${colorTogle ? "" : "rotate-180"}`}>
             <svg
               width="13"
               height="7"
@@ -179,7 +179,7 @@ export default function ProductFilter({ showFilter }) {
           className="flex justify-between items-center w-full "
         >
           <span className="text-[16px] font-medium">Estilos</span>{" "}
-          <span className={`${estilos ? "" : "rotate-180"}`}>
+          <span className={`duration-200 ${estilos ? "" : "rotate-180"}`}>
             <svg
               width="13"
               height="7"
@@ -223,7 +223,7 @@ export default function ProductFilter({ showFilter }) {
           className="flex justify-between items-center w-full "
         >
           <span className="text-[16px] font-medium">Acabado</span>{" "}
-          <span className={`${acabado ? "" : "rotate-180"}`}>
+          <span className={`duration-200 ${acabado ? "" : "rotate-180"}`}>
             <svg
               width="13"
               height="7"
@@ -267,7 +267,7 @@ export default function ProductFilter({ showFilter }) {
           className="flex justify-between items-center w-full "
         >
           <span className="text-[16px] font-medium">Grosores</span>{" "}
-          <span className={`${grosores ? "" : "rotate-180"}`}>
+          <span className={`duration-200 ${grosores ? "" : "rotate-180"}`}>
             <svg
               width="13"
               height="7"
@@ -312,7 +312,7 @@ export default function ProductFilter({ showFilter }) {
           className="flex justify-between items-center w-full "
         >
           <span className="text-[16px] font-medium">Precio</span>{" "}
-          <span className={`${precio ? "" : "rotate-180"}`}>
+          <span className={`duration-200 ${precio ? "" : "rotate-180"}`}>
             <svg
               width="13"
               height="7"

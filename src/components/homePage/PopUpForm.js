@@ -75,15 +75,17 @@ export default function PopUpForm() {
                   <div className="mt-10 flex w-full flex-col items-center space-y-3 uppercase">
                     <Link
                       href="#"
-                      className="w-full max-w-[292px] rounded-[70px] bg-[#1B2022] py-4 text-[12px] text-white"
+                      className="w-full max-w-[292px] hover:bg-[#2b303254] rounded-[70px] bg-[#1B2022] py-4 text-[12px] text-white"
                     >
                       Ver selección
                     </Link>
                     <Link
                       href="#"
-                      className="w-full max-w-[292px] rounded-[70px] border border-[#1B2022] py-4 text-[12px] text-[#1B2022]"
+                      className="w-full max-w-[292px] overflow-hidden group duration-400 hover:text-white rounded-[70px] relative border border-[#1B2022] py-4 text-[12px] text-[#1B2022]"
                     >
-                      Hablar con un asesor
+                     <span className="relative z-10"> Hablar con un asesor</span>
+
+                      <div className="absolute inset-0 bg-[#1B2022] w-0 group-hover:w-full duration-400  " />
                     </Link>
                   </div>
                 </div>

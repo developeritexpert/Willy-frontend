@@ -9,108 +9,142 @@ export default function ProductosUi() {
       title: "Calacatta Reale",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+      cate:"Nuevo"
     },
     {
       imgUrl: "/img/productos/2.png",
       title: "Carrara Eleganza",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+            cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/3.png",
       title: "Pietra Oscura",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+
     },
     {
       imgUrl: "/img/productos/4.png",
       title: "Onice Azzurro",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/5.png",
       title: "Rosa Palazzo",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+      
+            cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/6.png",
       title: "Grigio Etereo",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/7.png",
       title: "Calacatta Puro",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/8.png",
       title: "Panda Blanco",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/9.png",
       title: "Statuario Supremo",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/10.png",
       title: "Carrara Eleganza",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/11.png",
       title: "Pietra Oscura",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/12.png",
       title: "Onice Azzurro",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/13.png",
       title: "Rosa Palazzo",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/14.png",
       title: "Grigio Etereo",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/15.png",
       title: "Calacatta Puro",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                  cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/16.png",
       title: "Panda Blanco",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+
     },
     {
       imgUrl: "/img/productos/17.png",
       title: "Calacatta Reale",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                        cate:"Nuevo"
+
     },
     {
       imgUrl: "/img/productos/14.png",
       title: "Carrara Eleganza",
       price: "750",
       bg: ["#CCCCCC", "#E7E0D8", "#6E5B4C", "#1B202266"],
+                        cate:"Nuevo"
+
     },
   ];
 
@@ -227,13 +261,18 @@ export default function ProductosUi() {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[40px] md:gap-[29px] mt-[22px] lg:mt-[41px]">
-              {data.map((elm, idx) => (
-                <div>
-                  <img
+              {data.map((elm, indx) => (
+              <div key={indx} className="text-center lg:text-left">
+                 <div className="relative">
+                   <img
                     src={elm.imgUrl}
                     alt={elm.title}
                     className="w-full lg:w-auto"
                   />
+                  <span className="absolute px-[5px] py-[2px] bg-[#1B202230] top-[10px] right-[10px]  font-medium text-[#FFFFFF] text-[13px] ">
+                    {elm.cate}
+                  </span>
+                 </div>
                   <h5 className="text-lg lg:text-[24px] font-medium mt-[10px]">
                     {elm.title}
                   </h5>
@@ -306,6 +345,7 @@ export default function ProductosUi() {
       items-center justify-center
       border border-[#1B20220F]
       text-[14px] sm:text-[16px] lg:text-[18px]
+      hover:bg-[#1B2022] hover:text-[#ffff] transition duration-200
     "
               >
                 2
@@ -324,6 +364,7 @@ export default function ProductosUi() {
       items-center justify-center
       border border-[#1B20220F]
       text-[14px] sm:text-[16px] lg:text-[18px]
+      
     "
               >
                 3

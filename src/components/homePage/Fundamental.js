@@ -51,7 +51,7 @@ Existimos para elevar el estándar de la remodelación y construcción          
             </p>
             <Link
               href="#"
-              className="rounded-[70px] uppercase font-medium text-xs py-[10px] px-[12px] md:text-[13px] md:py-[17px] md:px-[50px] transition-colors capitalize  bg-[#1B2022] text-[#ffff] "
+              className="rounded-[70px] uppercase font-medium text-xs py-[10px] px-[12px] md:text-[13px] md:py-[17px] md:px-[50px] transition-colors capitalize  bg-[#1B2022] text-[#ffff] hover:bg-[#2b303254] duration-200"
             >
               Reservar una cita
             </Link>
